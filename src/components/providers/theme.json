@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_providers_themes",
+  "info": {
+    "displayName": "theme"
+  },
+  "options": {},
+  "attributes": {
+    "default": {
+      "type": "string",
+      "required": true
+    },
+    "kids": {
+      "type": "string"
+    }
+  }
+}

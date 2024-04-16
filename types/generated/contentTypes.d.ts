@@ -978,6 +978,41 @@ export interface ApiElevateLocaleElevateLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiElevateMenuElevateMenu extends Schema.CollectionType {
+  collectionName: 'elevate_menus';
+  info: {
+    singularName: 'elevate-menu';
+    pluralName: 'elevate-menus';
+    displayName: 'ElevateMenu';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    items: Attribute.Relation<
+      'api::elevate-menu.elevate-menu',
+      'oneToMany',
+      'api::elevate-menu-item.elevate-menu-item'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::elevate-menu.elevate-menu',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::elevate-menu.elevate-menu',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiElevateMenuItemElevateMenuItem
   extends Schema.CollectionType {
   collectionName: 'elevate_menu_items';
@@ -1048,12 +1083,15 @@ export interface ApiElevateMetadataElevateMetadata
     singularName: 'elevate-metadata';
     pluralName: 'elevate-metadata-all';
     displayName: 'ElevateMetadata';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     application: Attribute.Component<'metadata.application'>;
+    providers: Attribute.Component<'metadata.providers'>;
+    featureFlags: Attribute.Component<'metadata.feature-flags'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1451,6 +1489,7 @@ declare module '@strapi/types' {
       'api::elevate-country.elevate-country': ApiElevateCountryElevateCountry;
       'api::elevate-episode.elevate-episode': ApiElevateEpisodeElevateEpisode;
       'api::elevate-locale.elevate-locale': ApiElevateLocaleElevateLocale;
+      'api::elevate-menu.elevate-menu': ApiElevateMenuElevateMenu;
       'api::elevate-menu-item.elevate-menu-item': ApiElevateMenuItemElevateMenuItem;
       'api::elevate-metadata.elevate-metadata': ApiElevateMetadataElevateMetadata;
       'api::elevate-movie.elevate-movie': ApiElevateMovieElevateMovie;

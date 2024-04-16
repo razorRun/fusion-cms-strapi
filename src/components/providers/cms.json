@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_providers_cms",
+  "info": {
+    "displayName": "Cms",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "routesToPagesMappingList": {
+      "type": "string",
+      "required": true
+    },
+    "menu": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::elevate-menu.elevate-menu"
+    }
+  }
+}

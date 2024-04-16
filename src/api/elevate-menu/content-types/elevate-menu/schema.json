@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "elevate_menus",
+  "info": {
+    "singularName": "elevate-menu",
+    "pluralName": "elevate-menus",
+    "displayName": "ElevateMenu"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::elevate-menu-item.elevate-menu-item"
+    }
+  }
+}

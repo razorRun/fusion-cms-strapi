@@ -76,6 +76,17 @@ export interface MetadataApplication extends Schema.Component {
   };
 }
 
+export interface MetadataFeatureFlags extends Schema.Component {
+  collectionName: 'components_metadata_feature_flags';
+  info: {
+    displayName: 'Feature Flags';
+  };
+  attributes: {
+    offlineMode: Attribute.Boolean & Attribute.DefaultTo<false>;
+    appIdGidEasterEggActive: Attribute.Boolean & Attribute.DefaultTo<true>;
+  };
+}
+
 export interface MetadataI18N extends Schema.Component {
   collectionName: 'components_metadata_i18ns';
   info: {
@@ -120,6 +131,19 @@ export interface MetadataPlayer extends Schema.Component {
   };
 }
 
+export interface MetadataProviders extends Schema.Component {
+  collectionName: 'components_metadata_providers';
+  info: {
+    displayName: 'Providers';
+  };
+  attributes: {
+    cms: Attribute.Component<'providers.cms'>;
+    i18n: Attribute.Component<'providers.i18n'>;
+    ovp: Attribute.Component<'providers.ovp'>;
+    theme: Attribute.Component<'providers.theme'>;
+  };
+}
+
 export interface MetadataSearch extends Schema.Component {
   collectionName: 'components_metadata_searches';
   info: {
@@ -139,6 +163,54 @@ export interface MetadataTheme extends Schema.Component {
   };
   attributes: {
     default: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface ProvidersCms extends Schema.Component {
+  collectionName: 'components_providers_cms';
+  info: {
+    displayName: 'Cms';
+    description: '';
+  };
+  attributes: {
+    routesToPagesMappingList: Attribute.String & Attribute.Required;
+    menu: Attribute.Relation<
+      'providers.cms',
+      'oneToOne',
+      'api::elevate-menu.elevate-menu'
+    >;
+  };
+}
+
+export interface ProvidersI18N extends Schema.Component {
+  collectionName: 'components_providers_i18ns';
+  info: {
+    displayName: 'i18n';
+  };
+  attributes: {
+    dictionary: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface ProvidersOvp extends Schema.Component {
+  collectionName: 'components_providers_ovps';
+  info: {
+    displayName: 'ovp';
+  };
+  attributes: {
+    pageSize: Attribute.String;
+    url: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface ProvidersTheme extends Schema.Component {
+  collectionName: 'components_providers_themes';
+  info: {
+    displayName: 'theme';
+  };
+  attributes: {
+    default: Attribute.String & Attribute.Required;
+    kids: Attribute.String;
   };
 }
 
@@ -212,12 +284,18 @@ declare module '@strapi/types' {
       'elevate.elevate-image': ElevateElevateImage;
       'elevate.elevate-rating': ElevateElevateRating;
       'metadata.application': MetadataApplication;
+      'metadata.feature-flags': MetadataFeatureFlags;
       'metadata.i18n': MetadataI18N;
       'metadata.multitasking': MetadataMultitasking;
       'metadata.navigation': MetadataNavigation;
       'metadata.player': MetadataPlayer;
+      'metadata.providers': MetadataProviders;
       'metadata.search': MetadataSearch;
       'metadata.theme': MetadataTheme;
+      'providers.cms': ProvidersCms;
+      'providers.i18n': ProvidersI18N;
+      'providers.ovp': ProvidersOvp;
+      'providers.theme': ProvidersTheme;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

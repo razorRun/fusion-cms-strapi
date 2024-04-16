@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_metadata_providers",
+  "info": {
+    "displayName": "Providers"
+  },
+  "options": {},
+  "attributes": {
+    "cms": {
+      "type": "component",
+      "repeatable": false,
+      "component": "providers.cms"
+    },
+    "i18n": {
+      "type": "component",
+      "repeatable": false,
+      "component": "providers.i18n"
+    },
+    "ovp": {
+      "type": "component",
+      "repeatable": false,
+      "component": "providers.ovp"
+    },
+    "theme": {
+      "type": "component",
+      "repeatable": false,
+      "component": "providers.theme"
+    }
+  }
+}

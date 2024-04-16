@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_providers_i18ns",
+  "info": {
+    "displayName": "i18n"
+  },
+  "options": {},
+  "attributes": {
+    "dictionary": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

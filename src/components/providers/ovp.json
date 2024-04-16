@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_providers_ovps",
+  "info": {
+    "displayName": "ovp"
+  },
+  "options": {},
+  "attributes": {
+    "pageSize": {
+      "type": "string",
+      "required": false
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

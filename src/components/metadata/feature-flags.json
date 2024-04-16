@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_metadata_feature_flags",
+  "info": {
+    "displayName": "Feature Flags"
+  },
+  "options": {},
+  "attributes": {
+    "offlineMode": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "appIdGidEasterEggActive": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}
