@@ -4,7 +4,8 @@
   "info": {
     "singularName": "elevate-channel",
     "pluralName": "elevate-channels",
-    "displayName": "ElevateChannel"
+    "displayName": "ElevateChannel",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

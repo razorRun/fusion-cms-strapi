@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_metadata_i18ns",
+  "info": {
+    "displayName": "i18n"
+  },
+  "options": {},
+  "attributes": {
+    "defaultLocale": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

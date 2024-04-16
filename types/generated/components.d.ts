@@ -60,6 +60,88 @@ export interface ElevateElevateRating extends Schema.Component {
   };
 }
 
+export interface MetadataApplication extends Schema.Component {
+  collectionName: 'components_metadata_applications';
+  info: {
+    displayName: 'Application';
+  };
+  attributes: {
+    i18n: Attribute.Component<'metadata.i18n'> & Attribute.Required;
+    multitasking: Attribute.Component<'metadata.multitasking'> &
+      Attribute.Required;
+    navigation: Attribute.Component<'metadata.navigation'> & Attribute.Required;
+    player: Attribute.Component<'metadata.player'> & Attribute.Required;
+    search: Attribute.Component<'metadata.search'> & Attribute.Required;
+    theme: Attribute.Component<'metadata.theme'> & Attribute.Required;
+  };
+}
+
+export interface MetadataI18N extends Schema.Component {
+  collectionName: 'components_metadata_i18ns';
+  info: {
+    displayName: 'i18n';
+  };
+  attributes: {
+    defaultLocale: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface MetadataMultitasking extends Schema.Component {
+  collectionName: 'components_metadata_multitaskings';
+  info: {
+    displayName: 'multitasking';
+    description: '';
+  };
+  attributes: {
+    refreshTimeoutMs: Attribute.Integer & Attribute.Required;
+  };
+}
+
+export interface MetadataNavigation extends Schema.Component {
+  collectionName: 'components_metadata_navigations';
+  info: {
+    displayName: 'navigation';
+  };
+  attributes: {
+    defaultRoute: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'/'>;
+  };
+}
+
+export interface MetadataPlayer extends Schema.Component {
+  collectionName: 'components_metadata_players';
+  info: {
+    displayName: 'player';
+    description: '';
+  };
+  attributes: {
+    bookmarkUpdateIntervalMs: Attribute.Integer & Attribute.Required;
+  };
+}
+
+export interface MetadataSearch extends Schema.Component {
+  collectionName: 'components_metadata_searches';
+  info: {
+    displayName: 'search';
+    description: '';
+  };
+  attributes: {
+    searchTriggerChars: Attribute.Integer & Attribute.Required;
+    timeoutMilliseconds: Attribute.Integer & Attribute.Required;
+  };
+}
+
+export interface MetadataTheme extends Schema.Component {
+  collectionName: 'components_metadata_themes';
+  info: {
+    displayName: 'theme';
+  };
+  attributes: {
+    default: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface SharedMedia extends Schema.Component {
   collectionName: 'components_shared_media';
   info: {
@@ -129,6 +211,13 @@ declare module '@strapi/types' {
       'elevate.elevate-content': ElevateElevateContent;
       'elevate.elevate-image': ElevateElevateImage;
       'elevate.elevate-rating': ElevateElevateRating;
+      'metadata.application': MetadataApplication;
+      'metadata.i18n': MetadataI18N;
+      'metadata.multitasking': MetadataMultitasking;
+      'metadata.navigation': MetadataNavigation;
+      'metadata.player': MetadataPlayer;
+      'metadata.search': MetadataSearch;
+      'metadata.theme': MetadataTheme;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

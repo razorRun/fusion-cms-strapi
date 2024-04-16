@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_metadata_players",
+  "info": {
+    "displayName": "player",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "bookmarkUpdateIntervalMs": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

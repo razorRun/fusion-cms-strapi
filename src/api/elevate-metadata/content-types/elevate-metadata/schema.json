@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "elevate_metadata_all",
+  "info": {
+    "singularName": "elevate-metadata",
+    "pluralName": "elevate-metadata-all",
+    "displayName": "ElevateMetadata"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "application": {
+      "type": "component",
+      "repeatable": false,
+      "component": "metadata.application"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_metadata_navigations",
+  "info": {
+    "displayName": "navigation"
+  },
+  "options": {},
+  "attributes": {
+    "defaultRoute": {
+      "type": "string",
+      "required": true,
+      "default": "/"
+    }
+  }
+}

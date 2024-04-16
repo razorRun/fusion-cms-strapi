@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_metadata_applications",
+  "info": {
+    "displayName": "Application"
+  },
+  "options": {},
+  "attributes": {
+    "i18n": {
+      "type": "component",
+      "repeatable": false,
+      "component": "metadata.i18n",
+      "required": true
+    },
+    "multitasking": {
+      "type": "component",
+      "repeatable": false,
+      "component": "metadata.multitasking",
+      "required": true
+    },
+    "navigation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "metadata.navigation",
+      "required": true
+    },
+    "player": {
+      "type": "component",
+      "repeatable": false,
+      "component": "metadata.player",
+      "required": true
+    },
+    "search": {
+      "type": "component",
+      "repeatable": false,
+      "component": "metadata.search",
+      "required": true
+    },
+    "theme": {
+      "type": "component",
+      "repeatable": false,
+      "component": "metadata.theme",
+      "required": true
+    }
+  }
+}

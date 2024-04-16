@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_metadata_multitaskings",
+  "info": {
+    "displayName": "multitasking",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "refreshTimeoutMs": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

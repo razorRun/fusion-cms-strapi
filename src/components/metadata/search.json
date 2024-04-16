@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_metadata_searches",
+  "info": {
+    "displayName": "search",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "searchTriggerChars": {
+      "type": "integer",
+      "required": true
+    },
+    "timeoutMilliseconds": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

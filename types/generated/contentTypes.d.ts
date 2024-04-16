@@ -794,6 +794,7 @@ export interface ApiElevateChannelElevateChannel extends Schema.CollectionType {
     singularName: 'elevate-channel';
     pluralName: 'elevate-channels';
     displayName: 'ElevateChannel';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1033,6 +1034,37 @@ export interface ApiElevateMenuItemElevateMenuItem
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::elevate-menu-item.elevate-menu-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiElevateMetadataElevateMetadata
+  extends Schema.CollectionType {
+  collectionName: 'elevate_metadata_all';
+  info: {
+    singularName: 'elevate-metadata';
+    pluralName: 'elevate-metadata-all';
+    displayName: 'ElevateMetadata';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    application: Attribute.Component<'metadata.application'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::elevate-metadata.elevate-metadata',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::elevate-metadata.elevate-metadata',
       'oneToOne',
       'admin::user'
     > &
@@ -1420,6 +1452,7 @@ declare module '@strapi/types' {
       'api::elevate-episode.elevate-episode': ApiElevateEpisodeElevateEpisode;
       'api::elevate-locale.elevate-locale': ApiElevateLocaleElevateLocale;
       'api::elevate-menu-item.elevate-menu-item': ApiElevateMenuItemElevateMenuItem;
+      'api::elevate-metadata.elevate-metadata': ApiElevateMetadataElevateMetadata;
       'api::elevate-movie.elevate-movie': ApiElevateMovieElevateMovie;
       'api::elevate-page.elevate-page': ApiElevatePageElevatePage;
       'api::elevate-program.elevate-program': ApiElevateProgramElevateProgram;
