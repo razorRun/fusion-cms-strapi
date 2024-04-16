@@ -788,39 +788,6 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
-export interface ApiAboutAbout extends Schema.SingleType {
-  collectionName: 'abouts';
-  info: {
-    singularName: 'about';
-    pluralName: 'abouts';
-    displayName: 'About';
-    description: 'Write about yourself and the content you create';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    title: Attribute.String;
-    blocks: Attribute.DynamicZone<
-      ['shared.media', 'shared.quote', 'shared.rich-text', 'shared.slider']
-    >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::about.about',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::about.about',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiElevateChannelElevateChannel extends Schema.CollectionType {
   collectionName: 'elevate_channels';
   info: {
@@ -1392,39 +1359,6 @@ export interface ApiElevateShowElevateShow extends Schema.CollectionType {
   };
 }
 
-export interface ApiGlobalGlobal extends Schema.SingleType {
-  collectionName: 'globals';
-  info: {
-    singularName: 'global';
-    pluralName: 'globals';
-    displayName: 'Global';
-    description: 'Define global settings';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    siteName: Attribute.String & Attribute.Required;
-    favicon: Attribute.Media;
-    siteDescription: Attribute.Text & Attribute.Required;
-    defaultSeo: Attribute.Component<'shared.seo'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::global.global',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::global.global',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiVikimapThemeVikimapTheme extends Schema.CollectionType {
   collectionName: 'vikimap_themes';
   info: {
@@ -1480,7 +1414,6 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
-      'api::about.about': ApiAboutAbout;
       'api::elevate-channel.elevate-channel': ApiElevateChannelElevateChannel;
       'api::elevate-container.elevate-container': ApiElevateContainerElevateContainer;
       'api::elevate-country.elevate-country': ApiElevateCountryElevateCountry;
@@ -1492,7 +1425,6 @@ declare module '@strapi/types' {
       'api::elevate-program.elevate-program': ApiElevateProgramElevateProgram;
       'api::elevate-season.elevate-season': ApiElevateSeasonElevateSeason;
       'api::elevate-show.elevate-show': ApiElevateShowElevateShow;
-      'api::global.global': ApiGlobalGlobal;
       'api::vikimap-theme.vikimap-theme': ApiVikimapThemeVikimapTheme;
     }
   }
