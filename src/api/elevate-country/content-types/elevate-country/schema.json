@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "elevate_countries",
+  "info": {
+    "singularName": "elevate-country",
+    "pluralName": "elevate-countries",
+    "displayName": "ElevateCountry"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "alpha2Code": {
+      "type": "string",
+      "required": true
+    },
+    "alpha3Code": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

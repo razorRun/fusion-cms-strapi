@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_elevate_elevate_contents",
+  "info": {
+    "displayName": "ElevateContent"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "format": {
+      "type": "string",
+      "required": true
+    },
+    "duration": {
+      "type": "integer",
+      "required": true
+    },
+    "height": {
+      "type": "integer",
+      "required": true
+    },
+    "width": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

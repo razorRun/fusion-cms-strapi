@@ -362,72 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiAboutAbout extends Schema.SingleType {
-  collectionName: 'abouts';
-  info: {
-    singularName: 'about';
-    pluralName: 'abouts';
-    displayName: 'About';
-    description: 'Write about yourself and the content you create';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    title: Attribute.String;
-    blocks: Attribute.DynamicZone<
-      ['shared.media', 'shared.quote', 'shared.rich-text', 'shared.slider']
-    >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::about.about',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::about.about',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiGlobalGlobal extends Schema.SingleType {
-  collectionName: 'globals';
-  info: {
-    singularName: 'global';
-    pluralName: 'globals';
-    displayName: 'Global';
-    description: 'Define global settings';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    siteName: Attribute.String & Attribute.Required;
-    favicon: Attribute.Media;
-    siteDescription: Attribute.Text & Attribute.Required;
-    defaultSeo: Attribute.Component<'shared.seo'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::global.global',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::global.global',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -854,6 +788,680 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiAboutAbout extends Schema.SingleType {
+  collectionName: 'abouts';
+  info: {
+    singularName: 'about';
+    pluralName: 'abouts';
+    displayName: 'About';
+    description: 'Write about yourself and the content you create';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: Attribute.String;
+    blocks: Attribute.DynamicZone<
+      ['shared.media', 'shared.quote', 'shared.rich-text', 'shared.slider']
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about.about',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about.about',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiElevateChannelElevateChannel extends Schema.CollectionType {
+  collectionName: 'elevate_channels';
+  info: {
+    singularName: 'elevate-channel';
+    pluralName: 'elevate-channels';
+    displayName: 'ElevateChannel';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    extendedDescription: Attribute.Text & Attribute.Required;
+    images: Attribute.Component<'elevate.elevate-image', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::elevate-channel.elevate-channel',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::elevate-channel.elevate-channel',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiElevateContainerElevateContainer
+  extends Schema.CollectionType {
+  collectionName: 'elevate_containers';
+  info: {
+    singularName: 'elevate-container';
+    pluralName: 'elevate-containers';
+    displayName: 'ElevateContainer';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    query: Attribute.String;
+    displayText: Attribute.String;
+    template: Attribute.Enumeration<
+      [
+        'elevate-characters',
+        'elevate-hero-banner',
+        'elevate-continue-watching',
+        'elevate-carousel-portrait',
+        'elevate-carousel-wide',
+        'elevate-carousel-category-portrait',
+        'elevate-carousel-category-wide',
+        'elevate-category-carousel',
+        'elevate-categories',
+        'elevate-carousel-categories',
+        'elevate-carousel-view-all-portrait',
+        'elevate-grid-vertical-wide',
+        'elevate-grid-vertical-portrait',
+        'elevate-grid-horizontal-portrait',
+        'elevate-grid-horizontal-wide'
+      ]
+    >;
+    title: Attribute.String;
+    items: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::elevate-container.elevate-container',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::elevate-container.elevate-container',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiElevateCountryElevateCountry extends Schema.CollectionType {
+  collectionName: 'elevate_countries';
+  info: {
+    singularName: 'elevate-country';
+    pluralName: 'elevate-countries';
+    displayName: 'ElevateCountry';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    alpha2Code: Attribute.String & Attribute.Required;
+    alpha3Code: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::elevate-country.elevate-country',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::elevate-country.elevate-country',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiElevateEpisodeElevateEpisode extends Schema.CollectionType {
+  collectionName: 'elevate_episodes';
+  info: {
+    singularName: 'elevate-episode';
+    pluralName: 'elevate-episodes';
+    displayName: 'ElevateEpisode';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    showIdentifier: Attribute.String & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
+    duration: Attribute.Float;
+    images: Attribute.Component<'elevate.elevate-image', true>;
+    seasonNumber: Attribute.Integer;
+    episodeNumber: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::elevate-episode.elevate-episode',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::elevate-episode.elevate-episode',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiElevateLocaleElevateLocale extends Schema.CollectionType {
+  collectionName: 'elevate_locales';
+  info: {
+    singularName: 'elevate-locale';
+    pluralName: 'elevate-locales';
+    displayName: 'ElevateLocale';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    code: Attribute.String & Attribute.Required;
+    displayName: Attribute.String & Attribute.Required;
+    countryInfo: Attribute.Relation<
+      'api::elevate-locale.elevate-locale',
+      'oneToOne',
+      'api::elevate-country.elevate-country'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::elevate-locale.elevate-locale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::elevate-locale.elevate-locale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiElevateMenuItemElevateMenuItem
+  extends Schema.CollectionType {
+  collectionName: 'elevate_menu_items';
+  info: {
+    singularName: 'elevate-menu-item';
+    pluralName: 'elevate-menu-items';
+    displayName: 'ElevateMenuItem';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    query: Attribute.String;
+    displayText: Attribute.String;
+    icon: Attribute.String;
+    action: Attribute.Enumeration<
+      [
+        'login',
+        'logout',
+        'player',
+        'details',
+        'kidsmode',
+        'epg',
+        'custom',
+        'settings',
+        'favorites',
+        'account'
+      ]
+    >;
+    global: Attribute.Boolean;
+    hiddenWhenAuth: Attribute.Boolean;
+    requireAuth: Attribute.Boolean;
+    page: Attribute.Relation<
+      'api::elevate-menu-item.elevate-menu-item',
+      'oneToOne',
+      'api::elevate-page.elevate-page'
+    >;
+    orientation: Attribute.Enumeration<['left', 'right', 'center']>;
+    items: Attribute.Relation<
+      'api::elevate-menu-item.elevate-menu-item',
+      'oneToMany',
+      'api::elevate-menu-item.elevate-menu-item'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::elevate-menu-item.elevate-menu-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::elevate-menu-item.elevate-menu-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiElevateMovieElevateMovie extends Schema.CollectionType {
+  collectionName: 'elevate_movies';
+  info: {
+    singularName: 'elevate-movie';
+    pluralName: 'elevate-movies';
+    displayName: 'ElevateMovie';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedDate: Attribute.DateTime &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    duration: Attribute.Float &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    director: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    cast: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    contents: Attribute.Component<'elevate.elevate-content', true> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    images: Attribute.Component<'elevate.elevate-image', true> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    categories: Attribute.Component<'elevate.elevate-category', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    rating: Attribute.Component<'elevate.elevate-rating', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::elevate-movie.elevate-movie',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::elevate-movie.elevate-movie',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::elevate-movie.elevate-movie',
+      'oneToMany',
+      'api::elevate-movie.elevate-movie'
+    >;
+    locale: Attribute.String;
+  };
+}
+
+export interface ApiElevatePageElevatePage extends Schema.CollectionType {
+  collectionName: 'elevate_pages';
+  info: {
+    singularName: 'elevate-page';
+    pluralName: 'elevate-pages';
+    displayName: 'ElevatePage';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    displayText: Attribute.String;
+    items: Attribute.Relation<
+      'api::elevate-page.elevate-page',
+      'oneToMany',
+      'api::elevate-container.elevate-container'
+    >;
+    template: Attribute.Enumeration<
+      [
+        'elevate-modular-ui',
+        'elevate-filter',
+        'elevate-my-content',
+        'elevate-search',
+        'elevate-epg',
+        'elevate-show-detail',
+        'elevate-movie-detail',
+        'elevate-profile',
+        'elevate-sign-in',
+        'elevate-category',
+        'elevate-downloads',
+        'elevate-newpage'
+      ]
+    >;
+    theme: Attribute.Relation<
+      'api::elevate-page.elevate-page',
+      'oneToOne',
+      'api::vikimap-theme.vikimap-theme'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::elevate-page.elevate-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::elevate-page.elevate-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiElevateProgramElevateProgram extends Schema.CollectionType {
+  collectionName: 'elevate_programs';
+  info: {
+    singularName: 'elevate-program';
+    pluralName: 'elevate-programs';
+    displayName: 'ElevateProgram';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    startTime: Attribute.DateTime & Attribute.Required;
+    endTime: Attribute.DateTime & Attribute.Required;
+    mediaId: Attribute.String;
+    type: Attribute.String & Attribute.Required;
+    channelId: Attribute.String & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::elevate-program.elevate-program',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::elevate-program.elevate-program',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiElevateSeasonElevateSeason extends Schema.CollectionType {
+  collectionName: 'elevate_seasons';
+  info: {
+    singularName: 'elevate-season';
+    pluralName: 'elevate-seasons';
+    displayName: 'ElevateSeason';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    seasonNumber: Attribute.Integer & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::elevate-season.elevate-season',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::elevate-season.elevate-season',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiElevateShowElevateShow extends Schema.CollectionType {
+  collectionName: 'elevate_shows';
+  info: {
+    singularName: 'elevate-show';
+    pluralName: 'elevate-shows';
+    displayName: 'ElevateShow';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    images: Attribute.Component<'elevate.elevate-image', true> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    cateogries: Attribute.Component<'elevate.elevate-category', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    director: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    cast: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedDate: Attribute.DateTime &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    rating: Attribute.Component<'elevate.elevate-rating', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::elevate-show.elevate-show',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::elevate-show.elevate-show',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::elevate-show.elevate-show',
+      'oneToMany',
+      'api::elevate-show.elevate-show'
+    >;
+    locale: Attribute.String;
+  };
+}
+
+export interface ApiGlobalGlobal extends Schema.SingleType {
+  collectionName: 'globals';
+  info: {
+    singularName: 'global';
+    pluralName: 'globals';
+    displayName: 'Global';
+    description: 'Define global settings';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    siteName: Attribute.String & Attribute.Required;
+    favicon: Attribute.Media;
+    siteDescription: Attribute.Text & Attribute.Required;
+    defaultSeo: Attribute.Component<'shared.seo'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::global.global',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::global.global',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiVikimapThemeVikimapTheme extends Schema.CollectionType {
+  collectionName: 'vikimap_themes';
+  info: {
+    singularName: 'vikimap-theme';
+    pluralName: 'vikimap-themes';
+    displayName: 'VikimapTheme';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    colourOnBackground: Attribute.String & Attribute.Required;
+    colorOnAccent: Attribute.String & Attribute.Required;
+    error: Attribute.String & Attribute.Required;
+    accent: Attribute.String & Attribute.Required;
+    background: Attribute.String & Attribute.Required;
+    alternativeBackground: Attribute.String & Attribute.Required;
+    overlay: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::vikimap-theme.vikimap-theme',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::vikimap-theme.vikimap-theme',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -864,8 +1472,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::about.about': ApiAboutAbout;
-      'api::global.global': ApiGlobalGlobal;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -874,6 +1480,20 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::about.about': ApiAboutAbout;
+      'api::elevate-channel.elevate-channel': ApiElevateChannelElevateChannel;
+      'api::elevate-container.elevate-container': ApiElevateContainerElevateContainer;
+      'api::elevate-country.elevate-country': ApiElevateCountryElevateCountry;
+      'api::elevate-episode.elevate-episode': ApiElevateEpisodeElevateEpisode;
+      'api::elevate-locale.elevate-locale': ApiElevateLocaleElevateLocale;
+      'api::elevate-menu-item.elevate-menu-item': ApiElevateMenuItemElevateMenuItem;
+      'api::elevate-movie.elevate-movie': ApiElevateMovieElevateMovie;
+      'api::elevate-page.elevate-page': ApiElevatePageElevatePage;
+      'api::elevate-program.elevate-program': ApiElevateProgramElevateProgram;
+      'api::elevate-season.elevate-season': ApiElevateSeasonElevateSeason;
+      'api::elevate-show.elevate-show': ApiElevateShowElevateShow;
+      'api::global.global': ApiGlobalGlobal;
+      'api::vikimap-theme.vikimap-theme': ApiVikimapThemeVikimapTheme;
     }
   }
 }

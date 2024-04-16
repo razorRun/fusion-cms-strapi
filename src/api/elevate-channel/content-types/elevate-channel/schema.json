@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "elevate_channels",
+  "info": {
+    "singularName": "elevate-channel",
+    "pluralName": "elevate-channels",
+    "displayName": "ElevateChannel"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "extendedDescription": {
+      "type": "text",
+      "required": true
+    },
+    "images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elevate.elevate-image"
+    }
+  }
+}

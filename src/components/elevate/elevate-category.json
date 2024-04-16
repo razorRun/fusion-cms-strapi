@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_elevate_elevate_categories",
+  "info": {
+    "displayName": "ElevateCategory"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

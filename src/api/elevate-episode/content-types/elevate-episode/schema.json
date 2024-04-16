@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "elevate_episodes",
+  "info": {
+    "singularName": "elevate-episode",
+    "pluralName": "elevate-episodes",
+    "displayName": "ElevateEpisode"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "showIdentifier": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "duration": {
+      "type": "float"
+    },
+    "images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elevate.elevate-image"
+    },
+    "seasonNumber": {
+      "type": "integer"
+    },
+    "episodeNumber": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,5 +1,65 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface ElevateElevateCategory extends Schema.Component {
+  collectionName: 'components_elevate_elevate_categories';
+  info: {
+    displayName: 'ElevateCategory';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface ElevateElevateContent extends Schema.Component {
+  collectionName: 'components_elevate_elevate_contents';
+  info: {
+    displayName: 'ElevateContent';
+  };
+  attributes: {
+    url: Attribute.String & Attribute.Required;
+    format: Attribute.String & Attribute.Required;
+    duration: Attribute.Integer & Attribute.Required;
+    height: Attribute.Integer & Attribute.Required;
+    width: Attribute.Integer & Attribute.Required;
+  };
+}
+
+export interface ElevateElevateImage extends Schema.Component {
+  collectionName: 'components_elevate_elevate_images';
+  info: {
+    displayName: 'ElevateImage';
+  };
+  attributes: {
+    ImageType: Attribute.Enumeration<
+      [
+        'cover',
+        'thumbnail',
+        'banner',
+        'logo',
+        'backdrop',
+        'poster',
+        'backdrop_clean',
+        'poster_clean'
+      ]
+    > &
+      Attribute.Required;
+    url: Attribute.String & Attribute.Required;
+    templateUrl: Attribute.String;
+  };
+}
+
+export interface ElevateElevateRating extends Schema.Component {
+  collectionName: 'components_elevate_elevate_ratings';
+  info: {
+    displayName: 'ElevateRating';
+  };
+  attributes: {
+    scheme: Attribute.String & Attribute.Required;
+    rating: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface SharedMedia extends Schema.Component {
   collectionName: 'components_shared_media';
   info: {
@@ -65,6 +125,10 @@ export interface SharedSlider extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'elevate.elevate-category': ElevateElevateCategory;
+      'elevate.elevate-content': ElevateElevateContent;
+      'elevate.elevate-image': ElevateElevateImage;
+      'elevate.elevate-rating': ElevateElevateRating;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

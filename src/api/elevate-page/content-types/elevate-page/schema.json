@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "elevate_pages",
+  "info": {
+    "singularName": "elevate-page",
+    "pluralName": "elevate-pages",
+    "displayName": "ElevatePage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "displayText": {
+      "type": "string"
+    },
+    "items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::elevate-container.elevate-container"
+    },
+    "template": {
+      "type": "enumeration",
+      "enum": [
+        "elevate-modular-ui",
+        "elevate-filter",
+        "elevate-my-content",
+        "elevate-search",
+        "elevate-epg",
+        "elevate-show-detail",
+        "elevate-movie-detail",
+        "elevate-profile",
+        "elevate-sign-in",
+        "elevate-category",
+        "elevate-downloads",
+        "elevate-newpage"
+      ]
+    },
+    "theme": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vikimap-theme.vikimap-theme"
+    }
+  }
+}

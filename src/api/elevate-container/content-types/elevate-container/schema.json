@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "elevate_containers",
+  "info": {
+    "singularName": "elevate-container",
+    "pluralName": "elevate-containers",
+    "displayName": "ElevateContainer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "query": {
+      "type": "string"
+    },
+    "displayText": {
+      "type": "string"
+    },
+    "template": {
+      "type": "enumeration",
+      "enum": [
+        "elevate-characters",
+        "elevate-hero-banner",
+        "elevate-continue-watching",
+        "elevate-carousel-portrait",
+        "elevate-carousel-wide",
+        "elevate-carousel-category-portrait",
+        "elevate-carousel-category-wide",
+        "elevate-category-carousel",
+        "elevate-categories",
+        "elevate-carousel-categories",
+        "elevate-carousel-view-all-portrait",
+        "elevate-grid-vertical-wide",
+        "elevate-grid-vertical-portrait",
+        "elevate-grid-horizontal-portrait",
+        "elevate-grid-horizontal-wide"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "elevate_seasons",
+  "info": {
+    "singularName": "elevate-season",
+    "pluralName": "elevate-seasons",
+    "displayName": "ElevateSeason"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "seasonNumber": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

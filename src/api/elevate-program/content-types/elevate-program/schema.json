@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "elevate_programs",
+  "info": {
+    "singularName": "elevate-program",
+    "pluralName": "elevate-programs",
+    "displayName": "ElevateProgram"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "startTime": {
+      "type": "datetime",
+      "required": true
+    },
+    "endTime": {
+      "type": "datetime",
+      "required": true
+    },
+    "mediaId": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "channelId": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
