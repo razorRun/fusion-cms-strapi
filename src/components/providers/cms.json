@@ -6,14 +6,15 @@
   },
   "options": {},
   "attributes": {
-    "routesToPagesMappingList": {
-      "type": "string",
-      "required": true
-    },
     "menu": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::elevate-menu.elevate-menu"
+    },
+    "routesToPagesMappingList": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::route-to-page-mapping-list.route-to-page-mapping-list"
     }
   }
 }

@@ -1,7 +1,8 @@
 {
   "collectionName": "components_metadata_providers",
   "info": {
-    "displayName": "Providers"
+    "displayName": "Providers",
+    "description": ""
   },
   "options": {},
   "attributes": {

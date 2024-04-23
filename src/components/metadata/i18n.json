@@ -1,13 +1,19 @@
 {
   "collectionName": "components_metadata_i18ns",
   "info": {
-    "displayName": "i18n"
+    "displayName": "i18n",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "defaultLocale": {
-      "type": "string",
-      "required": true
+      "type": "enumeration",
+      "enum": [
+        "en",
+        "ar",
+        "es"
+      ],
+      "default": "en"
     }
   }
 }

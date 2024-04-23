@@ -1,7 +1,8 @@
 {
   "collectionName": "components_metadata_applications",
   "info": {
-    "displayName": "Application"
+    "displayName": "Application",
+    "description": ""
   },
   "options": {},
   "attributes": {

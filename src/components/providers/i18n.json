@@ -1,13 +1,15 @@
 {
   "collectionName": "components_providers_i18ns",
   "info": {
-    "displayName": "i18n"
+    "displayName": "i18n",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "dictionary": {
-      "type": "string",
-      "required": true
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::dictionary.dictionary"
     }
   }
 }

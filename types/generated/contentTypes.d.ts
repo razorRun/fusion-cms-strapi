@@ -788,6 +788,239 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiDictionaryDictionary extends Schema.CollectionType {
+  collectionName: 'dictionaries';
+  info: {
+    singularName: 'dictionary';
+    pluralName: 'dictionaries';
+    displayName: 'Dictionary';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    directionality: Attribute.String & Attribute.Required;
+    moreDetails: Attribute.String;
+    login: Attribute.String;
+    networkErrorLoadingViewTitle: Attribute.String;
+    networkErrorLoadingViewContent: Attribute.String;
+    reconnectionRetryMessage: Attribute.String;
+    retryingMEssage: Attribute.String;
+    retry: Attribute.String;
+    networkRecoveryTitle: Attribute.String;
+    networkRecoveryContent: Attribute.String;
+    okButton: Attribute.String;
+    cancelButton: Attribute.String;
+    settings: Attribute.String;
+    playTrailer: Attribute.String;
+    director: Attribute.String;
+    cast: Attribute.String;
+    backButton: Attribute.String;
+    season: Attribute.String;
+    like: Attribute.String;
+    share: Attribute.String;
+    audio: Attribute.String;
+    subtitles: Attribute.String;
+    close: Attribute.String;
+    play: Attribute.String;
+    pause: Attribute.String;
+    cancel: Attribute.String;
+    recentSearches: Attribute.String;
+    movies: Attribute.String;
+    tvShows: Attribute.String;
+    signupAccountQuestion: Attribute.String;
+    signUp: Attribute.String;
+    forgotPassword: Attribute.String;
+    signOut: Attribute.String;
+    myWatchlist: Attribute.String;
+    editProfile: Attribute.String;
+    help: Attribute.String;
+    loginAccountQuestion: Attribute.String;
+    needHelp: Attribute.String;
+    passwordHint: Attribute.String;
+    emailHint: Attribute.String;
+    search: Attribute.String;
+    genericErrorTitle: Attribute.String;
+    genericApiErrorDescription: Attribute.String;
+    resume: Attribute.String;
+    language: Attribute.String;
+    episodes: Attribute.String;
+    moreLikeThis: Attribute.String;
+    loginErrorDescription: Attribute.String;
+    loginEmptyDescription: Attribute.String;
+    favoriteMovies: Attribute.String;
+    favoriteShows: Attribute.String;
+    continueWatching: Attribute.String;
+    selectLanguage: Attribute.String;
+    logOutQuestion: Attribute.String;
+    pairing: Attribute.String;
+    detailedLogoutQuestion: Attribute.String;
+    noResultsFound: Attribute.String;
+    favorites: Attribute.String;
+    minutes: Attribute.String;
+    myContentEmptyText: Attribute.String;
+    seeMore: Attribute.String;
+    seeLess: Attribute.String;
+    Subscribe: Attribute.String;
+    numberOfSeasons: Attribute.String;
+    pairingTitle: Attribute.String;
+    pairingVisit: Attribute.String;
+    pairingUseCode: Attribute.String;
+    pairingObtaining: Attribute.String;
+    resetPasswordTitle: Attribute.String;
+    resetPasswordSubTitle: Attribute.String;
+    sendAction: Attribute.String;
+    resetPasswordErrorResultTitle: Attribute.String;
+    resetPasswordErrorResultSubTitle: Attribute.String;
+    resetPasswordSuccessTitle: Attribute.String;
+    addFavourite: Attribute.String;
+    removeFavourite: Attribute.String;
+    episodeWithNumber: Attribute.String;
+    seasonWithNumber: Attribute.String;
+    resumePopupTitle: Attribute.String;
+    resumePopupContent: Attribute.String;
+    logout: Attribute.String;
+    watchNowButton: Attribute.String;
+    epgEntitlementPopupTitle: Attribute.String;
+    epgEntitlementPopupContent: Attribute.String;
+    epgLoginPopupTitle: Attribute.String;
+    epgLoginPopupContent1: Attribute.String;
+    epgLoginPopupContent2: Attribute.String;
+    channel: Attribute.String;
+    fullGuide: Attribute.String;
+    upNext: Attribute.String;
+    watchNow: Attribute.String;
+    startOver: Attribute.String;
+    searchResults: Attribute.String;
+    yes: Attribute.String;
+    no: Attribute.String;
+    delete: Attribute.String;
+    more: Attribute.String;
+    download: Attribute.String;
+    backl: Attribute.String;
+    categorynocontenttext: Attribute.String;
+    notifyMe: Attribute.String;
+    downloadOnlyOnWifi: Attribute.String;
+    downlaodsEmptyPage: Attribute.String;
+    categoryNoContentText: Attribute.String;
+    seasonAndEpisodeWithNumber: Attribute.String;
+    episodeTitle: Attribute.String;
+    numberOfEpisodes: Attribute.String;
+    monday: Attribute.String;
+    tuesday: Attribute.String;
+    wednesday: Attribute.String;
+    thursday: Attribute.String;
+    friday: Attribute.String;
+    saturday: Attribute.String;
+    sunday: Attribute.String;
+    noContent: Attribute.String;
+    playEpisodeOfSeason: Attribute.String;
+    subscribeTo: Attribute.String;
+    live: Attribute.String;
+    seriesepidoeshort: Attribute.String;
+    off: Attribute.String;
+    resumeEpisodeOfSeason: Attribute.String;
+    favoriteChannels: Attribute.String;
+    contactUs: Attribute.String;
+    termsOfUse: Attribute.String;
+    about: Attribute.String;
+    searchPlaceholder: Attribute.String;
+    email: Attribute.String;
+    password: Attribute.String;
+    watching: Attribute.String;
+    backToSchedule: Attribute.String;
+    loadErrorTitle: Attribute.String;
+    loadErrorMessage: Attribute.String;
+    viewDoesNotExistInTheAppTitle: Attribute.String;
+    viewDoesNotExistInTheAppDescription: Attribute.String;
+    rentSd: Attribute.String;
+    subscribeWithAds: Attribute.String;
+    rentHd: Attribute.String;
+    appVersion: Attribute.String;
+    press: Attribute.String;
+    to: Attribute.String;
+    dismiss: Attribute.String;
+    profile: Attribute.String;
+    thereAreNoSeasonsAvailableTitle: Attribute.String;
+    thereAreNoSeasonsAvailableDescription: Attribute.String;
+    thereAreNoEpisodesAvailableTitle: Attribute.String;
+    thereAreNoEpisodesAvailableDescription: Attribute.String;
+    for: Attribute.String;
+    pressTwice: Attribute.String;
+    epg: Attribute.String;
+    remindMe: Attribute.String;
+    whoIsWatching: Attribute.String;
+    addNewProfile: Attribute.String;
+    chooseYourAvatar: Attribute.String;
+    backToProfiles: Attribute.String;
+    skipForNow: Attribute.String;
+    enterYourProfileName: Attribute.String;
+    typeYourProfileNameHere: Attribute.String;
+    proceed: Attribute.String;
+    isThisAKidProfile: Attribute.String;
+    noItIsNot: Attribute.String;
+    yesItIs: Attribute.String;
+    newProfileHasBeenCreated: Attribute.String;
+    profileNameAndAvatar: Attribute.String;
+    profilePin: Attribute.String;
+    deleteProfile: Attribute.String;
+    changeProfileName: Attribute.String;
+    changeAvatar: Attribute.String;
+    setUpProfilePin: Attribute.String;
+    setUpProfilePinRule: Attribute.String;
+    deleteProfileRule: Attribute.String;
+    deleteProfileRuleForPrimaryProfile: Attribute.String;
+    deleteProfileQuestionTitle: Attribute.String;
+    deleteProfileQuestionDescription: Attribute.String;
+    profileAvatarHasBeenChangedTitle: Attribute.String;
+    profileNameHasBeenChangedTitle: Attribute.String;
+    profileNameHasBeenChangedDescription: Attribute.String;
+    changeYourAvatar: Attribute.String;
+    profileHasBeenDeletedTitle: Attribute.String;
+    profileHasBeenDeletedDescription: Attribute.String;
+    manageProfiles: Attribute.String;
+    myElevate: Attribute.String;
+    informYourProfilePin: Attribute.String;
+    wrongPin: Attribute.String;
+    forgotYourPinInstructions: Attribute.String;
+    setUpYourProfilePin: Attribute.String;
+    yourPinHasBeenSet: Attribute.String;
+    somethingWentWrong: Attribute.String;
+    somethingWentWrongPin: Attribute.String;
+    changeYourProfilePin: Attribute.String;
+    EnterYourNewProfilePin: Attribute.String;
+    EnterYourCurrentProfilePin: Attribute.String;
+    yourProfilePinHasBeenUpdated: Attribute.String;
+    yourProfilePinHasBeenRemoved: Attribute.String;
+    removeYourProfilePin: Attribute.String;
+    changeProfilePin: Attribute.String;
+    removeProfilePin: Attribute.String;
+    changeProfilePinDescription: Attribute.String;
+    viewAll: Attribute.String;
+    resetPasswordErrorInputTitle: Attribute.String;
+    backToEpg: Attribute.String;
+    moreOptions: Attribute.String;
+    backToDetailsPage: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::dictionary.dictionary',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::dictionary.dictionary',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiElevateChannelElevateChannel extends Schema.CollectionType {
   collectionName: 'elevate_channels';
   info: {
@@ -1429,6 +1662,81 @@ export interface ApiElevateShowElevateShow extends Schema.CollectionType {
   };
 }
 
+export interface ApiRouteToPageMappingRouteToPageMapping
+  extends Schema.CollectionType {
+  collectionName: 'route_to_page_mappings';
+  info: {
+    singularName: 'route-to-page-mapping';
+    pluralName: 'route-to-page-mappings';
+    displayName: 'RouteToPageMapping';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    route: Attribute.String;
+    page: Attribute.Relation<
+      'api::route-to-page-mapping.route-to-page-mapping',
+      'oneToOne',
+      'api::elevate-page.elevate-page'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::route-to-page-mapping.route-to-page-mapping',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::route-to-page-mapping.route-to-page-mapping',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiRouteToPageMappingListRouteToPageMappingList
+  extends Schema.CollectionType {
+  collectionName: 'route_to_page_mapping_lists';
+  info: {
+    singularName: 'route-to-page-mapping-list';
+    pluralName: 'route-to-page-mapping-lists';
+    displayName: 'RouteToPageMappingList';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    mappings: Attribute.Relation<
+      'api::route-to-page-mapping-list.route-to-page-mapping-list',
+      'oneToMany',
+      'api::route-to-page-mapping.route-to-page-mapping'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::route-to-page-mapping-list.route-to-page-mapping-list',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::route-to-page-mapping-list.route-to-page-mapping-list',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiVikimapThemeVikimapTheme extends Schema.CollectionType {
   collectionName: 'vikimap_themes';
   info: {
@@ -1484,6 +1792,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::dictionary.dictionary': ApiDictionaryDictionary;
       'api::elevate-channel.elevate-channel': ApiElevateChannelElevateChannel;
       'api::elevate-container.elevate-container': ApiElevateContainerElevateContainer;
       'api::elevate-country.elevate-country': ApiElevateCountryElevateCountry;
@@ -1497,6 +1806,8 @@ declare module '@strapi/types' {
       'api::elevate-program.elevate-program': ApiElevateProgramElevateProgram;
       'api::elevate-season.elevate-season': ApiElevateSeasonElevateSeason;
       'api::elevate-show.elevate-show': ApiElevateShowElevateShow;
+      'api::route-to-page-mapping.route-to-page-mapping': ApiRouteToPageMappingRouteToPageMapping;
+      'api::route-to-page-mapping-list.route-to-page-mapping-list': ApiRouteToPageMappingListRouteToPageMappingList;
       'api::vikimap-theme.vikimap-theme': ApiVikimapThemeVikimapTheme;
     }
   }

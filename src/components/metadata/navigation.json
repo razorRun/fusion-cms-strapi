@@ -1,13 +1,13 @@
 {
   "collectionName": "components_metadata_navigations",
   "info": {
-    "displayName": "navigation"
+    "displayName": "navigation",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "defaultRoute": {
       "type": "string",
-      "required": true,
       "default": "/"
     }
   }

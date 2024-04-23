@@ -1,0 +1,627 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dictionaries",
+  "info": {
+    "singularName": "dictionary",
+    "pluralName": "dictionaries",
+    "displayName": "Dictionary",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "directionality": {
+      "type": "string",
+      "required": true
+    },
+    "moreDetails": {
+      "type": "string"
+    },
+    "login": {
+      "type": "string"
+    },
+    "networkErrorLoadingViewTitle": {
+      "type": "string"
+    },
+    "networkErrorLoadingViewContent": {
+      "type": "string"
+    },
+    "reconnectionRetryMessage": {
+      "type": "string"
+    },
+    "retryingMEssage": {
+      "type": "string"
+    },
+    "retry": {
+      "type": "string"
+    },
+    "networkRecoveryTitle": {
+      "type": "string"
+    },
+    "networkRecoveryContent": {
+      "type": "string"
+    },
+    "okButton": {
+      "type": "string"
+    },
+    "cancelButton": {
+      "type": "string"
+    },
+    "settings": {
+      "type": "string"
+    },
+    "playTrailer": {
+      "type": "string"
+    },
+    "director": {
+      "type": "string"
+    },
+    "cast": {
+      "type": "string"
+    },
+    "backButton": {
+      "type": "string"
+    },
+    "season": {
+      "type": "string"
+    },
+    "like": {
+      "type": "string"
+    },
+    "share": {
+      "type": "string"
+    },
+    "audio": {
+      "type": "string"
+    },
+    "subtitles": {
+      "type": "string"
+    },
+    "close": {
+      "type": "string"
+    },
+    "play": {
+      "type": "string"
+    },
+    "pause": {
+      "type": "string"
+    },
+    "cancel": {
+      "type": "string"
+    },
+    "recentSearches": {
+      "type": "string"
+    },
+    "movies": {
+      "type": "string"
+    },
+    "tvShows": {
+      "type": "string"
+    },
+    "signupAccountQuestion": {
+      "type": "string"
+    },
+    "signUp": {
+      "type": "string"
+    },
+    "forgotPassword": {
+      "type": "string"
+    },
+    "signOut": {
+      "type": "string"
+    },
+    "myWatchlist": {
+      "type": "string"
+    },
+    "editProfile": {
+      "type": "string"
+    },
+    "help": {
+      "type": "string"
+    },
+    "loginAccountQuestion": {
+      "type": "string"
+    },
+    "needHelp": {
+      "type": "string"
+    },
+    "passwordHint": {
+      "type": "string"
+    },
+    "emailHint": {
+      "type": "string"
+    },
+    "search": {
+      "type": "string"
+    },
+    "genericErrorTitle": {
+      "type": "string"
+    },
+    "genericApiErrorDescription": {
+      "type": "string"
+    },
+    "resume": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "episodes": {
+      "type": "string"
+    },
+    "moreLikeThis": {
+      "type": "string"
+    },
+    "loginErrorDescription": {
+      "type": "string"
+    },
+    "loginEmptyDescription": {
+      "type": "string"
+    },
+    "favoriteMovies": {
+      "type": "string"
+    },
+    "favoriteShows": {
+      "type": "string"
+    },
+    "continueWatching": {
+      "type": "string"
+    },
+    "selectLanguage": {
+      "type": "string"
+    },
+    "logOutQuestion": {
+      "type": "string"
+    },
+    "pairing": {
+      "type": "string"
+    },
+    "detailedLogoutQuestion": {
+      "type": "string"
+    },
+    "noResultsFound": {
+      "type": "string"
+    },
+    "favorites": {
+      "type": "string"
+    },
+    "minutes": {
+      "type": "string"
+    },
+    "myContentEmptyText": {
+      "type": "string"
+    },
+    "seeMore": {
+      "type": "string"
+    },
+    "seeLess": {
+      "type": "string"
+    },
+    "Subscribe": {
+      "type": "string"
+    },
+    "numberOfSeasons": {
+      "type": "string"
+    },
+    "pairingTitle": {
+      "type": "string"
+    },
+    "pairingVisit": {
+      "type": "string"
+    },
+    "pairingUseCode": {
+      "type": "string"
+    },
+    "pairingObtaining": {
+      "type": "string"
+    },
+    "resetPasswordTitle": {
+      "type": "string"
+    },
+    "resetPasswordSubTitle": {
+      "type": "string"
+    },
+    "sendAction": {
+      "type": "string"
+    },
+    "resetPasswordErrorResultTitle": {
+      "type": "string"
+    },
+    "resetPasswordErrorResultSubTitle": {
+      "type": "string"
+    },
+    "resetPasswordSuccessTitle": {
+      "type": "string"
+    },
+    "addFavourite": {
+      "type": "string"
+    },
+    "removeFavourite": {
+      "type": "string"
+    },
+    "episodeWithNumber": {
+      "type": "string"
+    },
+    "seasonWithNumber": {
+      "type": "string"
+    },
+    "resumePopupTitle": {
+      "type": "string"
+    },
+    "resumePopupContent": {
+      "type": "string"
+    },
+    "logout": {
+      "type": "string"
+    },
+    "watchNowButton": {
+      "type": "string"
+    },
+    "epgEntitlementPopupTitle": {
+      "type": "string"
+    },
+    "epgEntitlementPopupContent": {
+      "type": "string"
+    },
+    "epgLoginPopupTitle": {
+      "type": "string"
+    },
+    "epgLoginPopupContent1": {
+      "type": "string"
+    },
+    "epgLoginPopupContent2": {
+      "type": "string"
+    },
+    "channel": {
+      "type": "string"
+    },
+    "fullGuide": {
+      "type": "string"
+    },
+    "upNext": {
+      "type": "string"
+    },
+    "watchNow": {
+      "type": "string"
+    },
+    "startOver": {
+      "type": "string"
+    },
+    "searchResults": {
+      "type": "string"
+    },
+    "yes": {
+      "type": "string"
+    },
+    "no": {
+      "type": "string"
+    },
+    "delete": {
+      "type": "string"
+    },
+    "more": {
+      "type": "string"
+    },
+    "download": {
+      "type": "string"
+    },
+    "backl": {
+      "type": "string"
+    },
+    "categorynocontenttext": {
+      "type": "string"
+    },
+    "notifyMe": {
+      "type": "string"
+    },
+    "downloadOnlyOnWifi": {
+      "type": "string"
+    },
+    "downlaodsEmptyPage": {
+      "type": "string"
+    },
+    "categoryNoContentText": {
+      "type": "string"
+    },
+    "seasonAndEpisodeWithNumber": {
+      "type": "string"
+    },
+    "episodeTitle": {
+      "type": "string"
+    },
+    "numberOfEpisodes": {
+      "type": "string"
+    },
+    "monday": {
+      "type": "string"
+    },
+    "tuesday": {
+      "type": "string"
+    },
+    "wednesday": {
+      "type": "string"
+    },
+    "thursday": {
+      "type": "string"
+    },
+    "friday": {
+      "type": "string"
+    },
+    "saturday": {
+      "type": "string"
+    },
+    "sunday": {
+      "type": "string"
+    },
+    "noContent": {
+      "type": "string"
+    },
+    "playEpisodeOfSeason": {
+      "type": "string"
+    },
+    "subscribeTo": {
+      "type": "string"
+    },
+    "live": {
+      "type": "string"
+    },
+    "seriesepidoeshort": {
+      "type": "string"
+    },
+    "off": {
+      "type": "string"
+    },
+    "resumeEpisodeOfSeason": {
+      "type": "string"
+    },
+    "favoriteChannels": {
+      "type": "string"
+    },
+    "contactUs": {
+      "type": "string"
+    },
+    "termsOfUse": {
+      "type": "string"
+    },
+    "about": {
+      "type": "string"
+    },
+    "searchPlaceholder": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "watching": {
+      "type": "string"
+    },
+    "backToSchedule": {
+      "type": "string"
+    },
+    "loadErrorTitle": {
+      "type": "string"
+    },
+    "loadErrorMessage": {
+      "type": "string"
+    },
+    "viewDoesNotExistInTheAppTitle": {
+      "type": "string"
+    },
+    "viewDoesNotExistInTheAppDescription": {
+      "type": "string"
+    },
+    "rentSd": {
+      "type": "string"
+    },
+    "subscribeWithAds": {
+      "type": "string"
+    },
+    "rentHd": {
+      "type": "string"
+    },
+    "appVersion": {
+      "type": "string"
+    },
+    "press": {
+      "type": "string"
+    },
+    "to": {
+      "type": "string"
+    },
+    "dismiss": {
+      "type": "string"
+    },
+    "profile": {
+      "type": "string"
+    },
+    "thereAreNoSeasonsAvailableTitle": {
+      "type": "string"
+    },
+    "thereAreNoSeasonsAvailableDescription": {
+      "type": "string"
+    },
+    "thereAreNoEpisodesAvailableTitle": {
+      "type": "string"
+    },
+    "thereAreNoEpisodesAvailableDescription": {
+      "type": "string"
+    },
+    "for": {
+      "type": "string"
+    },
+    "pressTwice": {
+      "type": "string"
+    },
+    "epg": {
+      "type": "string"
+    },
+    "remindMe": {
+      "type": "string"
+    },
+    "whoIsWatching": {
+      "type": "string"
+    },
+    "addNewProfile": {
+      "type": "string"
+    },
+    "chooseYourAvatar": {
+      "type": "string"
+    },
+    "backToProfiles": {
+      "type": "string"
+    },
+    "skipForNow": {
+      "type": "string"
+    },
+    "enterYourProfileName": {
+      "type": "string"
+    },
+    "typeYourProfileNameHere": {
+      "type": "string"
+    },
+    "proceed": {
+      "type": "string"
+    },
+    "isThisAKidProfile": {
+      "type": "string"
+    },
+    "noItIsNot": {
+      "type": "string"
+    },
+    "yesItIs": {
+      "type": "string"
+    },
+    "newProfileHasBeenCreated": {
+      "type": "string"
+    },
+    "profileNameAndAvatar": {
+      "type": "string"
+    },
+    "profilePin": {
+      "type": "string"
+    },
+    "deleteProfile": {
+      "type": "string"
+    },
+    "changeProfileName": {
+      "type": "string"
+    },
+    "changeAvatar": {
+      "type": "string"
+    },
+    "setUpProfilePin": {
+      "type": "string"
+    },
+    "setUpProfilePinRule": {
+      "type": "string"
+    },
+    "deleteProfileRule": {
+      "type": "string"
+    },
+    "deleteProfileRuleForPrimaryProfile": {
+      "type": "string"
+    },
+    "deleteProfileQuestionTitle": {
+      "type": "string"
+    },
+    "deleteProfileQuestionDescription": {
+      "type": "string"
+    },
+    "profileAvatarHasBeenChangedTitle": {
+      "type": "string"
+    },
+    "profileNameHasBeenChangedTitle": {
+      "type": "string"
+    },
+    "profileNameHasBeenChangedDescription": {
+      "type": "string"
+    },
+    "changeYourAvatar": {
+      "type": "string"
+    },
+    "profileHasBeenDeletedTitle": {
+      "type": "string"
+    },
+    "profileHasBeenDeletedDescription": {
+      "type": "string"
+    },
+    "manageProfiles": {
+      "type": "string"
+    },
+    "myElevate": {
+      "type": "string"
+    },
+    "informYourProfilePin": {
+      "type": "string"
+    },
+    "wrongPin": {
+      "type": "string"
+    },
+    "forgotYourPinInstructions": {
+      "type": "string"
+    },
+    "setUpYourProfilePin": {
+      "type": "string"
+    },
+    "yourPinHasBeenSet": {
+      "type": "string"
+    },
+    "somethingWentWrong": {
+      "type": "string"
+    },
+    "somethingWentWrongPin": {
+      "type": "string"
+    },
+    "changeYourProfilePin": {
+      "type": "string"
+    },
+    "EnterYourNewProfilePin": {
+      "type": "string"
+    },
+    "EnterYourCurrentProfilePin": {
+      "type": "string"
+    },
+    "yourProfilePinHasBeenUpdated": {
+      "type": "string"
+    },
+    "yourProfilePinHasBeenRemoved": {
+      "type": "string"
+    },
+    "removeYourProfilePin": {
+      "type": "string"
+    },
+    "changeProfilePin": {
+      "type": "string"
+    },
+    "removeProfilePin": {
+      "type": "string"
+    },
+    "changeProfilePinDescription": {
+      "type": "string"
+    },
+    "viewAll": {
+      "type": "string"
+    },
+    "resetPasswordErrorInputTitle": {
+      "type": "string"
+    },
+    "backToEpg": {
+      "type": "string"
+    },
+    "moreOptions": {
+      "type": "string"
+    },
+    "backToDetailsPage": {
+      "type": "string"
+    }
+  }
+}

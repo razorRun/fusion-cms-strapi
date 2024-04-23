@@ -64,6 +64,7 @@ export interface MetadataApplication extends Schema.Component {
   collectionName: 'components_metadata_applications';
   info: {
     displayName: 'Application';
+    description: '';
   };
   attributes: {
     i18n: Attribute.Component<'metadata.i18n'> & Attribute.Required;
@@ -91,9 +92,11 @@ export interface MetadataI18N extends Schema.Component {
   collectionName: 'components_metadata_i18ns';
   info: {
     displayName: 'i18n';
+    description: '';
   };
   attributes: {
-    defaultLocale: Attribute.String & Attribute.Required;
+    defaultLocale: Attribute.Enumeration<['en', 'ar', 'es']> &
+      Attribute.DefaultTo<'en'>;
   };
 }
 
@@ -112,11 +115,10 @@ export interface MetadataNavigation extends Schema.Component {
   collectionName: 'components_metadata_navigations';
   info: {
     displayName: 'navigation';
+    description: '';
   };
   attributes: {
-    defaultRoute: Attribute.String &
-      Attribute.Required &
-      Attribute.DefaultTo<'/'>;
+    defaultRoute: Attribute.String & Attribute.DefaultTo<'/'>;
   };
 }
 
@@ -135,6 +137,7 @@ export interface MetadataProviders extends Schema.Component {
   collectionName: 'components_metadata_providers';
   info: {
     displayName: 'Providers';
+    description: '';
   };
   attributes: {
     cms: Attribute.Component<'providers.cms'>;
@@ -173,11 +176,15 @@ export interface ProvidersCms extends Schema.Component {
     description: '';
   };
   attributes: {
-    routesToPagesMappingList: Attribute.String & Attribute.Required;
     menu: Attribute.Relation<
       'providers.cms',
       'oneToOne',
       'api::elevate-menu.elevate-menu'
+    >;
+    routesToPagesMappingList: Attribute.Relation<
+      'providers.cms',
+      'oneToOne',
+      'api::route-to-page-mapping-list.route-to-page-mapping-list'
     >;
   };
 }
@@ -186,9 +193,14 @@ export interface ProvidersI18N extends Schema.Component {
   collectionName: 'components_providers_i18ns';
   info: {
     displayName: 'i18n';
+    description: '';
   };
   attributes: {
-    dictionary: Attribute.String & Attribute.Required;
+    dictionary: Attribute.Relation<
+      'providers.i18n',
+      'oneToOne',
+      'api::dictionary.dictionary'
+    >;
   };
 }
 
@@ -207,10 +219,19 @@ export interface ProvidersTheme extends Schema.Component {
   collectionName: 'components_providers_themes';
   info: {
     displayName: 'theme';
+    description: '';
   };
   attributes: {
-    default: Attribute.String & Attribute.Required;
-    kids: Attribute.String;
+    default: Attribute.Relation<
+      'providers.theme',
+      'oneToOne',
+      'api::vikimap-theme.vikimap-theme'
+    >;
+    kids: Attribute.Relation<
+      'providers.theme',
+      'oneToOne',
+      'api::vikimap-theme.vikimap-theme'
+    >;
   };
 }
 

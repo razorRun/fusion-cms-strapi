@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "route_to_page_mapping_lists",
+  "info": {
+    "singularName": "route-to-page-mapping-list",
+    "pluralName": "route-to-page-mapping-lists",
+    "displayName": "RouteToPageMappingList",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "mappings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::route-to-page-mapping.route-to-page-mapping"
+    }
+  }
+}
