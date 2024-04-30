@@ -1267,21 +1267,6 @@ export interface ApiElevateMenuItemElevateMenuItem
     title: Attribute.String & Attribute.Required;
     query: Attribute.String;
     displayText: Attribute.String;
-    icon: Attribute.String;
-    action: Attribute.Enumeration<
-      [
-        'login',
-        'logout',
-        'player',
-        'details',
-        'kidsmode',
-        'epg',
-        'custom',
-        'settings',
-        'favorites',
-        'account'
-      ]
-    >;
     global: Attribute.Boolean;
     hiddenWhenAuth: Attribute.Boolean;
     requireAuth: Attribute.Boolean;
@@ -1295,6 +1280,55 @@ export interface ApiElevateMenuItemElevateMenuItem
       'api::elevate-menu-item.elevate-menu-item',
       'oneToMany',
       'api::elevate-menu-item.elevate-menu-item'
+    >;
+    viaIconLabel: Attribute.Enumeration<
+      [
+        'add',
+        'apps',
+        'arrow_long',
+        'arrow_down',
+        'arrow_left',
+        'arrow_right',
+        'arrow_up',
+        'calendar',
+        'check',
+        'close',
+        'email',
+        'epg',
+        'forward_10',
+        'hamburger',
+        'home',
+        'info',
+        'language',
+        'like_filled',
+        'like_outlined',
+        'listing',
+        'lock',
+        'notifications_alert',
+        'on_demand',
+        'pause',
+        'play',
+        'profile',
+        'radio_button_off',
+        'radio_button_on',
+        'recording',
+        'rectangles_1',
+        'rectangles_2',
+        'rectangles rewind_10',
+        'rewind_48',
+        'search',
+        'settings',
+        'share',
+        'voice',
+        'volume',
+        'audio_subtitles',
+        'back_10',
+        'clock',
+        'like',
+        'password',
+        'stats',
+        'news'
+      ]
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

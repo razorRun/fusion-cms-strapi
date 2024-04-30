@@ -22,24 +22,6 @@
     "displayText": {
       "type": "string"
     },
-    "icon": {
-      "type": "string"
-    },
-    "action": {
-      "type": "enumeration",
-      "enum": [
-        "login",
-        "logout",
-        "player",
-        "details",
-        "kidsmode",
-        "epg",
-        "custom",
-        "settings",
-        "favorites",
-        "account"
-      ]
-    },
     "global": {
       "type": "boolean"
     },
@@ -66,6 +48,56 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::elevate-menu-item.elevate-menu-item"
+    },
+    "viaIconLabel": {
+      "type": "enumeration",
+      "enum": [
+        "add",
+        "apps",
+        "arrow_long",
+        "arrow_down",
+        "arrow_left",
+        "arrow_right",
+        "arrow_up",
+        "calendar",
+        "check",
+        "close",
+        "email",
+        "epg",
+        "forward_10",
+        "hamburger",
+        "home",
+        "info",
+        "language",
+        "like_filled",
+        "like_outlined",
+        "listing",
+        "lock",
+        "notifications_alert",
+        "on_demand",
+        "pause",
+        "play",
+        "profile",
+        "radio_button_off",
+        "radio_button_on",
+        "recording",
+        "rectangles_1",
+        "rectangles_2",
+        "rectangles rewind_10",
+        "rewind_48",
+        "search",
+        "settings",
+        "share",
+        "voice",
+        "volume",
+        "audio_subtitles",
+        "back_10",
+        "clock",
+        "like",
+        "password",
+        "stats",
+        "news"
+      ]
     }
   }
 }
