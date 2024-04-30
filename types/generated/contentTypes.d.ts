@@ -1733,7 +1733,8 @@ export interface ApiRouteToPageMappingRouteToPageMapping
         '/view-all',
         '/player',
         '/downloads',
-        '/program'
+        '/program',
+        '/collection'
       ]
     >;
     createdAt: Attribute.DateTime;
