@@ -1067,6 +1067,7 @@ export interface ApiElevateContainerElevateContainer
     draftAndPublish: true;
   };
   attributes: {
+    title: Attribute.String;
     query: Attribute.String;
     displayText: Attribute.String;
     template: Attribute.Enumeration<
@@ -1088,7 +1089,6 @@ export interface ApiElevateContainerElevateContainer
         'elevate-grid-horizontal-wide'
       ]
     >;
-    title: Attribute.String;
     items: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

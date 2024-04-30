@@ -12,6 +12,9 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "title": {
+        "type": "string"
+    },
     "query": {
       "type": "string"
     },
@@ -37,9 +40,6 @@
         "elevate-grid-horizontal-portrait",
         "elevate-grid-horizontal-wide"
       ]
-    },
-    "title": {
-      "type": "string"
     },
     "items": {
       "type": "string"
