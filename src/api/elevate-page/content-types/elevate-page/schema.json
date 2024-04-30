@@ -16,10 +16,7 @@
       "type": "string",
       "required": true
     },
-    "displayText": {
-      "type": "string"
-    },
-    "items": {
+    "containers": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::elevate-container.elevate-container"

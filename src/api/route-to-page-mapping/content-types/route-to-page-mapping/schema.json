@@ -15,13 +15,28 @@
     "title": {
       "type": "string"
     },
-    "route": {
-      "type": "string"
-    },
     "page": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::elevate-page.elevate-page"
+    },
+    "route": {
+      "type": "enumeration",
+      "enum": [
+        "/show",
+        "/movie",
+        "/home",
+        "/info",
+        "/profile",
+        "/epg",
+        "/category",
+        "/pairing-code",
+        "/reset-password",
+        "/view-all",
+        "/player",
+        "/downloads",
+        "/program"
+      ]
     }
   }
 }

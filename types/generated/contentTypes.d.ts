@@ -1145,17 +1145,22 @@ export interface ApiElevateEpisodeElevateEpisode extends Schema.CollectionType {
     singularName: 'elevate-episode';
     pluralName: 'elevate-episodes';
     displayName: 'ElevateEpisode';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    showIdentifier: Attribute.String & Attribute.Required;
     title: Attribute.String & Attribute.Required;
     duration: Attribute.Float;
     images: Attribute.Component<'elevate.elevate-image', true>;
     seasonNumber: Attribute.Integer;
     episodeNumber: Attribute.Integer;
+    show: Attribute.Relation<
+      'api::elevate-episode.elevate-episode',
+      'oneToOne',
+      'api::elevate-show.elevate-show'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1460,8 +1465,7 @@ export interface ApiElevatePageElevatePage extends Schema.CollectionType {
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
-    displayText: Attribute.String;
-    items: Attribute.Relation<
+    containers: Attribute.Relation<
       'api::elevate-page.elevate-page',
       'oneToMany',
       'api::elevate-container.elevate-container'
@@ -1676,11 +1680,27 @@ export interface ApiRouteToPageMappingRouteToPageMapping
   };
   attributes: {
     title: Attribute.String;
-    route: Attribute.String;
     page: Attribute.Relation<
       'api::route-to-page-mapping.route-to-page-mapping',
       'oneToOne',
       'api::elevate-page.elevate-page'
+    >;
+    route: Attribute.Enumeration<
+      [
+        '/show',
+        '/movie',
+        '/home',
+        '/info',
+        '/profile',
+        '/epg',
+        '/category',
+        '/pairing-code',
+        '/reset-password',
+        '/view-all',
+        '/player',
+        '/downloads',
+        '/program'
+      ]
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
