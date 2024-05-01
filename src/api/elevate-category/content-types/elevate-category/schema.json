@@ -16,13 +16,14 @@
       "type": "string"
     },
     "displayTitle": {
-        "type": "string"
+      "type": "string"
     },
     "description": {
       "type": "string"
     },
     "queryIdentifier": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     }
   }
 }

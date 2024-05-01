@@ -2059,7 +2059,7 @@ export interface ApiElevateCategoryElevateCategory
     title: Attribute.String;
     displayTitle: Attribute.String;
     description: Attribute.String;
-    queryIdentifier: Attribute.String;
+    queryIdentifier: Attribute.String & Attribute.Unique;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
