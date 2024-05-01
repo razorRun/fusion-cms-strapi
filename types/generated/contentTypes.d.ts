@@ -2043,6 +2043,39 @@ export interface ApiDictionaryDictionary extends Schema.CollectionType {
   };
 }
 
+export interface ApiElevateCategoryElevateCategory
+  extends Schema.CollectionType {
+  collectionName: 'elevate_categories';
+  info: {
+    singularName: 'elevate-category';
+    pluralName: 'elevate-categories';
+    displayName: 'ElevateCategory';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.String;
+    queryIdentifier: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::elevate-category.elevate-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::elevate-category.elevate-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiElevateChannelElevateChannel extends Schema.CollectionType {
   collectionName: 'elevate_channels';
   info: {
@@ -2455,12 +2488,6 @@ export interface ApiElevateMovieElevateMovie extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    categories: Attribute.Component<'elevate.elevate-category', true> &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     rating: Attribute.Component<'elevate.elevate-rating', true> &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -2473,6 +2500,11 @@ export interface ApiElevateMovieElevateMovie extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    categories: Attribute.Relation<
+      'api::elevate-movie.elevate-movie',
+      'oneToMany',
+      'api::elevate-category.elevate-category'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2658,12 +2690,6 @@ export interface ApiElevateShowElevateShow extends Schema.CollectionType {
           localized: false;
         };
       }>;
-    cateogries: Attribute.Component<'elevate.elevate-category', true> &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     publishedDate: Attribute.DateTime &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -2682,6 +2708,11 @@ export interface ApiElevateShowElevateShow extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    categories: Attribute.Relation<
+      'api::elevate-show.elevate-show',
+      'oneToMany',
+      'api::elevate-category.elevate-category'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2854,6 +2885,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::dictionary.dictionary': ApiDictionaryDictionary;
+      'api::elevate-category.elevate-category': ApiElevateCategoryElevateCategory;
       'api::elevate-channel.elevate-channel': ApiElevateChannelElevateChannel;
       'api::elevate-container.elevate-container': ApiElevateContainerElevateContainer;
       'api::elevate-country.elevate-country': ApiElevateCountryElevateCountry;

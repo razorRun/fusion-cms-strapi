@@ -65,16 +65,6 @@
       "component": "elevate.elevate-image",
       "required": true
     },
-    "categories": {
-      "type": "component",
-      "repeatable": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "elevate.elevate-category"
-    },
     "rating": {
       "type": "component",
       "repeatable": true,
@@ -94,6 +84,11 @@
         }
       },
       "component": "elevate.elevate-credit"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::elevate-category.elevate-category"
     }
   }
 }

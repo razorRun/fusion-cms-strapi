@@ -1,18 +1,5 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
-export interface ElevateElevateCategory extends Schema.Component {
-  collectionName: 'components_elevate_elevate_categories';
-  info: {
-    displayName: 'ElevateCategory';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    description: Attribute.String & Attribute.Required;
-    queryIdentifier: Attribute.String;
-  };
-}
-
 export interface ElevateElevateContent extends Schema.Component {
   collectionName: 'components_elevate_elevate_contents';
   info: {
@@ -313,7 +300,6 @@ export interface SharedSlider extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'elevate.elevate-category': ElevateElevateCategory;
       'elevate.elevate-content': ElevateElevateContent;
       'elevate.elevate-credit': ElevateElevateCredit;
       'elevate.elevate-image': ElevateElevateImage;

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "elevate_categories",
+  "info": {
+    "singularName": "elevate-category",
+    "pluralName": "elevate-categories",
+    "displayName": "ElevateCategory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "queryIdentifier": {
+      "type": "string"
+    }
+  }
+}
