@@ -807,7 +807,7 @@ export interface ApiDictionaryDictionary extends Schema.CollectionType {
     networkErrorLoadingViewTitle: Attribute.String;
     networkErrorLoadingViewContent: Attribute.String;
     reconnectionRetryMessage: Attribute.String;
-    retryingMEssage: Attribute.String;
+    retryingMessage: Attribute.String;
     retry: Attribute.String;
     networkRecoveryTitle: Attribute.String;
     networkRecoveryContent: Attribute.String;
@@ -899,12 +899,11 @@ export interface ApiDictionaryDictionary extends Schema.CollectionType {
     delete: Attribute.String;
     more: Attribute.String;
     download: Attribute.String;
-    backl: Attribute.String;
-    categorynocontenttext: Attribute.String;
+    back: Attribute.String;
+    categoryNoContentText: Attribute.String;
     notifyMe: Attribute.String;
     downloadOnlyOnWifi: Attribute.String;
-    downlaodsEmptyPage: Attribute.String;
-    categoryNoContentText: Attribute.String;
+    downloadsEmptyPage: Attribute.String;
     seasonAndEpisodeWithNumber: Attribute.String;
     episodeTitle: Attribute.String;
     numberOfEpisodes: Attribute.String;
@@ -919,7 +918,7 @@ export interface ApiDictionaryDictionary extends Schema.CollectionType {
     playEpisodeOfSeason: Attribute.String;
     subscribeTo: Attribute.String;
     live: Attribute.String;
-    seriesepidoeshort: Attribute.String;
+    seriesEpisodeShort: Attribute.String;
     off: Attribute.String;
     resumeEpisodeOfSeason: Attribute.String;
     favoriteChannels: Attribute.String;

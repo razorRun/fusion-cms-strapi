@@ -314,7 +314,7 @@
     "back": {
       "type": "string"
     },
-    "categorynocontenttext": {
+    "categoryNoContentText": {
       "type": "string"
     },
     "notifyMe": {
@@ -323,10 +323,7 @@
     "downloadOnlyOnWifi": {
       "type": "string"
     },
-    "downlaodsEmptyPage": {
-      "type": "string"
-    },
-    "categoryNoContentText": {
+    "downloadsEmptyPage": {
       "type": "string"
     },
     "seasonAndEpisodeWithNumber": {
@@ -371,7 +368,7 @@
     "live": {
       "type": "string"
     },
-    "seriesepidoeshort": {
+    "seriesEpisodeShort": {
       "type": "string"
     },
     "off": {
