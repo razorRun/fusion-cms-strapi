@@ -35,7 +35,7 @@
     "reconnectionRetryMessage": {
       "type": "string"
     },
-    "retryingMEssage": {
+    "retryingMessage": {
       "type": "string"
     },
     "retry": {
@@ -311,7 +311,7 @@
     "download": {
       "type": "string"
     },
-    "backl": {
+    "back": {
       "type": "string"
     },
     "categorynocontenttext": {
