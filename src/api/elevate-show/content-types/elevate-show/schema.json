@@ -4,7 +4,8 @@
   "info": {
     "singularName": "elevate-show",
     "pluralName": "elevate-shows",
-    "displayName": "ElevateShow"
+    "displayName": "ElevateShow",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -54,22 +55,6 @@
       },
       "component": "elevate.elevate-category"
     },
-    "director": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
-    "cast": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
     "publishedDate": {
       "pluginOptions": {
         "i18n": {
@@ -87,6 +72,16 @@
         }
       },
       "component": "elevate.elevate-rating"
+    },
+    "credits": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "elevate.elevate-credit"
     }
   }
 }

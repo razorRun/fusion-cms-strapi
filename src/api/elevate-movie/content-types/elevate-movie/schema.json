@@ -4,7 +4,8 @@
   "info": {
     "singularName": "elevate-movie",
     "pluralName": "elevate-movies",
-    "displayName": "ElevateMovie"
+    "displayName": "ElevateMovie",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -41,30 +42,6 @@
       },
       "type": "datetime",
       "required": false
-    },
-    "duration": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "float"
-    },
-    "director": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
-    "cast": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
     },
     "contents": {
       "type": "component",
@@ -107,6 +84,16 @@
         }
       },
       "component": "elevate.elevate-rating"
+    },
+    "credits": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "elevate.elevate-credit"
     }
   }
 }

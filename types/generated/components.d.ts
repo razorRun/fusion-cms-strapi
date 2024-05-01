@@ -4,10 +4,12 @@ export interface ElevateElevateCategory extends Schema.Component {
   collectionName: 'components_elevate_elevate_categories';
   info: {
     displayName: 'ElevateCategory';
+    description: '';
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
     description: Attribute.String & Attribute.Required;
+    queryIdentifier: Attribute.String;
   };
 }
 
@@ -22,6 +24,17 @@ export interface ElevateElevateContent extends Schema.Component {
     duration: Attribute.Integer & Attribute.Required;
     height: Attribute.Integer & Attribute.Required;
     width: Attribute.Integer & Attribute.Required;
+  };
+}
+
+export interface ElevateElevateCredit extends Schema.Component {
+  collectionName: 'components_elevate_elevate_credits';
+  info: {
+    displayName: 'ElevateCredit';
+  };
+  attributes: {
+    role: Attribute.String;
+    name: Attribute.String;
   };
 }
 
@@ -302,6 +315,7 @@ declare module '@strapi/types' {
     export interface Components {
       'elevate.elevate-category': ElevateElevateCategory;
       'elevate.elevate-content': ElevateElevateContent;
+      'elevate.elevate-credit': ElevateElevateCredit;
       'elevate.elevate-image': ElevateElevateImage;
       'elevate.elevate-rating': ElevateElevateRating;
       'metadata.application': MetadataApplication;

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_elevate_elevate_credits",
+  "info": {
+    "displayName": "ElevateCredit"
+  },
+  "options": {},
+  "attributes": {
+    "role": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

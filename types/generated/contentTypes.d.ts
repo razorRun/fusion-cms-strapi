@@ -2410,6 +2410,7 @@ export interface ApiElevateMovieElevateMovie extends Schema.CollectionType {
     singularName: 'elevate-movie';
     pluralName: 'elevate-movies';
     displayName: 'ElevateMovie';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -2440,24 +2441,6 @@ export interface ApiElevateMovieElevateMovie extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    duration: Attribute.Float &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    director: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    cast: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     contents: Attribute.Component<'elevate.elevate-content', true> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
@@ -2479,6 +2462,12 @@ export interface ApiElevateMovieElevateMovie extends Schema.CollectionType {
         };
       }>;
     rating: Attribute.Component<'elevate.elevate-rating', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    credits: Attribute.Component<'elevate.elevate-credit', true> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -2637,6 +2626,7 @@ export interface ApiElevateShowElevateShow extends Schema.CollectionType {
     singularName: 'elevate-show';
     pluralName: 'elevate-shows';
     displayName: 'ElevateShow';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -2674,18 +2664,6 @@ export interface ApiElevateShowElevateShow extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    director: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    cast: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     publishedDate: Attribute.DateTime &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -2693,6 +2671,12 @@ export interface ApiElevateShowElevateShow extends Schema.CollectionType {
         };
       }>;
     rating: Attribute.Component<'elevate.elevate-rating', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    credits: Attribute.Component<'elevate.elevate-credit', true> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
