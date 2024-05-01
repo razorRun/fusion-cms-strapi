@@ -2463,7 +2463,7 @@ export interface ApiElevateMovieElevateMovie extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    description: Attribute.String &
+    description: Attribute.Text &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -2678,7 +2678,7 @@ export interface ApiElevateShowElevateShow extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    description: Attribute.String &
+    description: Attribute.Text &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
