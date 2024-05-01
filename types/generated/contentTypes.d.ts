@@ -2050,12 +2050,14 @@ export interface ApiElevateCategoryElevateCategory
     singularName: 'elevate-category';
     pluralName: 'elevate-categories';
     displayName: 'ElevateCategory';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     title: Attribute.String;
+    displayTitle: Attribute.String;
     description: Attribute.String;
     queryIdentifier: Attribute.String;
     createdAt: Attribute.DateTime;
