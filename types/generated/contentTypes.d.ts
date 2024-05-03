@@ -2322,9 +2322,7 @@ export interface ApiElevateMenuItemElevateMenuItem
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
-    query: Attribute.String;
     displayText: Attribute.String;
-    global: Attribute.Boolean;
     hiddenWhenAuth: Attribute.Boolean;
     requireAuth: Attribute.Boolean;
     page: Attribute.Relation<
@@ -2333,11 +2331,6 @@ export interface ApiElevateMenuItemElevateMenuItem
       'api::elevate-page.elevate-page'
     >;
     orientation: Attribute.Enumeration<['left', 'right', 'center']>;
-    items: Attribute.Relation<
-      'api::elevate-menu-item.elevate-menu-item',
-      'oneToMany',
-      'api::elevate-menu-item.elevate-menu-item'
-    >;
     viaIconLabel: Attribute.Enumeration<
       [
         'add',

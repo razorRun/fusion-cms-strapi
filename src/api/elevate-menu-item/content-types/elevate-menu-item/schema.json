@@ -16,14 +16,8 @@
       "type": "string",
       "required": true
     },
-    "query": {
-      "type": "string"
-    },
     "displayText": {
       "type": "string"
-    },
-    "global": {
-      "type": "boolean"
     },
     "hiddenWhenAuth": {
       "type": "boolean"
@@ -43,11 +37,6 @@
         "right",
         "center"
       ]
-    },
-    "items": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::elevate-menu-item.elevate-menu-item"
     },
     "viaIconLabel": {
       "type": "enumeration",

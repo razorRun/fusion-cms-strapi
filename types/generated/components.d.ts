@@ -229,8 +229,7 @@ export interface ProvidersTheme extends Schema.Component {
       'providers.theme',
       'oneToOne',
       'api::vikimap-theme.vikimap-theme'
-    > &
-      Attribute.Private;
+    >;
     kids: Attribute.Relation<
       'providers.theme',
       'oneToOne',
