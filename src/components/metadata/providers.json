@@ -9,12 +9,14 @@
     "cms": {
       "type": "component",
       "repeatable": false,
-      "component": "providers.cms"
+      "component": "providers.cms",
+      "required": true
     },
     "i18n": {
       "type": "component",
       "repeatable": false,
-      "component": "providers.i18n"
+      "component": "providers.i18n",
+      "required": true
     },
     "ovp": {
       "type": "component",
@@ -24,7 +26,8 @@
     "theme": {
       "type": "component",
       "repeatable": false,
-      "component": "providers.theme"
+      "component": "providers.theme",
+      "required": true
     }
   }
 }

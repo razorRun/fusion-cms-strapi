@@ -13,7 +13,8 @@
         "ar",
         "es"
       ],
-      "default": "en"
+      "default": "en",
+      "required": true
     }
   }
 }

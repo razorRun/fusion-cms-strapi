@@ -96,6 +96,7 @@ export interface MetadataI18N extends Schema.Component {
   };
   attributes: {
     defaultLocale: Attribute.Enumeration<['en', 'ar', 'es']> &
+      Attribute.Required &
       Attribute.DefaultTo<'en'>;
   };
 }
@@ -118,7 +119,9 @@ export interface MetadataNavigation extends Schema.Component {
     description: '';
   };
   attributes: {
-    defaultRoute: Attribute.String & Attribute.DefaultTo<'/'>;
+    defaultRoute: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'/'>;
   };
 }
 
@@ -140,10 +143,10 @@ export interface MetadataProviders extends Schema.Component {
     description: '';
   };
   attributes: {
-    cms: Attribute.Component<'providers.cms'>;
-    i18n: Attribute.Component<'providers.i18n'>;
+    cms: Attribute.Component<'providers.cms'> & Attribute.Required;
+    i18n: Attribute.Component<'providers.i18n'> & Attribute.Required;
     ovp: Attribute.Component<'providers.ovp'>;
-    theme: Attribute.Component<'providers.theme'>;
+    theme: Attribute.Component<'providers.theme'> & Attribute.Required;
   };
 }
 
@@ -180,12 +183,14 @@ export interface ProvidersCms extends Schema.Component {
       'providers.cms',
       'oneToOne',
       'api::elevate-menu.elevate-menu'
-    >;
+    > &
+      Attribute.Private;
     routesToPagesMappingList: Attribute.Relation<
       'providers.cms',
       'oneToOne',
       'api::route-to-page-mapping-list.route-to-page-mapping-list'
-    >;
+    > &
+      Attribute.Private;
   };
 }
 
@@ -200,7 +205,8 @@ export interface ProvidersI18N extends Schema.Component {
       'providers.i18n',
       'oneToOne',
       'api::dictionary.dictionary'
-    >;
+    > &
+      Attribute.Private;
   };
 }
 
@@ -226,7 +232,8 @@ export interface ProvidersTheme extends Schema.Component {
       'providers.theme',
       'oneToOne',
       'api::vikimap-theme.vikimap-theme'
-    >;
+    > &
+      Attribute.Private;
     kids: Attribute.Relation<
       'providers.theme',
       'oneToOne',

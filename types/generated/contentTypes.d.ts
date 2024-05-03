@@ -2418,8 +2418,9 @@ export interface ApiElevateMetadataElevateMetadata
     draftAndPublish: true;
   };
   attributes: {
-    application: Attribute.Component<'metadata.application'>;
-    providers: Attribute.Component<'metadata.providers'>;
+    application: Attribute.Component<'metadata.application'> &
+      Attribute.Required;
+    providers: Attribute.Component<'metadata.providers'> & Attribute.Required;
     featureFlags: Attribute.Component<'metadata.feature-flags'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

@@ -9,7 +9,8 @@
     "dictionary": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::dictionary.dictionary"
+      "target": "api::dictionary.dictionary",
+      "private": true
     }
   }
 }

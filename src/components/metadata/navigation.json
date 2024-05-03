@@ -8,7 +8,8 @@
   "attributes": {
     "defaultRoute": {
       "type": "string",
-      "default": "/"
+      "default": "/",
+      "required": true
     }
   }
 }

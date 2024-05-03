@@ -9,7 +9,8 @@
     "default": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::vikimap-theme.vikimap-theme"
+      "target": "api::vikimap-theme.vikimap-theme",
+      "private": true
     },
     "kids": {
       "type": "relation",

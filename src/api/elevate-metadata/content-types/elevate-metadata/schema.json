@@ -15,12 +15,14 @@
     "application": {
       "type": "component",
       "repeatable": false,
-      "component": "metadata.application"
+      "component": "metadata.application",
+      "required": true
     },
     "providers": {
       "type": "component",
       "repeatable": false,
-      "component": "metadata.providers"
+      "component": "metadata.providers",
+      "required": true
     },
     "featureFlags": {
       "type": "component",
