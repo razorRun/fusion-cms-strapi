@@ -2552,11 +2552,15 @@ export interface ApiElevatePageElevatePage extends Schema.CollectionType {
         'elevate-epg',
         'elevate-show-detail',
         'elevate-movie-detail',
+        'elevate-program-detail',
         'elevate-profile',
         'elevate-sign-in',
         'elevate-category',
         'elevate-downloads',
-        'elevate-newpage'
+        'elevate-newpage',
+        'elevate-player',
+        'elevate-view-all',
+        'elevate-collection'
       ]
     >;
     theme: Attribute.Relation<
