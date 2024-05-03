@@ -183,14 +183,12 @@ export interface ProvidersCms extends Schema.Component {
       'providers.cms',
       'oneToOne',
       'api::elevate-menu.elevate-menu'
-    > &
-      Attribute.Private;
+    >;
     routesToPagesMappingList: Attribute.Relation<
       'providers.cms',
       'oneToOne',
       'api::route-to-page-mapping-list.route-to-page-mapping-list'
-    > &
-      Attribute.Private;
+    >;
   };
 }
 
@@ -205,8 +203,7 @@ export interface ProvidersI18N extends Schema.Component {
       'providers.i18n',
       'oneToOne',
       'api::dictionary.dictionary'
-    > &
-      Attribute.Private;
+    >;
   };
 }
 

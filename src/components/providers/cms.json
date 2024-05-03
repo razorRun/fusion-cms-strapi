@@ -9,14 +9,12 @@
     "menu": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::elevate-menu.elevate-menu",
-      "private": true
+      "target": "api::elevate-menu.elevate-menu"
     },
     "routesToPagesMappingList": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::route-to-page-mapping-list.route-to-page-mapping-list",
-      "private": true
+      "target": "api::route-to-page-mapping-list.route-to-page-mapping-list"
     }
   }
 }
