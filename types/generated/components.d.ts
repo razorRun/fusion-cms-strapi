@@ -225,7 +225,12 @@ export interface ProvidersTheme extends Schema.Component {
     description: '';
   };
   attributes: {
-    elevate_theme: Attribute.Relation<
+    default: Attribute.Relation<
+      'providers.theme',
+      'oneToOne',
+      'api::elevate-theme.elevate-theme'
+    >;
+    kids: Attribute.Relation<
       'providers.theme',
       'oneToOne',
       'api::elevate-theme.elevate-theme'

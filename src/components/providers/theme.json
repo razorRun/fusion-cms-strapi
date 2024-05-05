@@ -6,7 +6,12 @@
   },
   "options": {},
   "attributes": {
-    "elevate_theme": {
+    "default": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::elevate-theme.elevate-theme"
+    },
+    "kids": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::elevate-theme.elevate-theme"
