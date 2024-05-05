@@ -5,16 +5,5 @@
     "description": ""
   },
   "options": {},
-  "attributes": {
-    "default": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::vikimap-theme.vikimap-theme"
-    },
-    "kids": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::vikimap-theme.vikimap-theme"
-    }
-  }
+  "attributes": {}
 }

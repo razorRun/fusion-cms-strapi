@@ -2563,11 +2563,6 @@ export interface ApiElevatePageElevatePage extends Schema.CollectionType {
         'elevate-collection'
       ]
     >;
-    theme: Attribute.Relation<
-      'api::elevate-page.elevate-page',
-      'oneToOne',
-      'api::vikimap-theme.vikimap-theme'
-    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2737,6 +2732,43 @@ export interface ApiElevateShowElevateShow extends Schema.CollectionType {
   };
 }
 
+export interface ApiElevateThemeElevateTheme extends Schema.CollectionType {
+  collectionName: 'elevate_themes';
+  info: {
+    singularName: 'elevate-theme';
+    pluralName: 'elevate-themes';
+    displayName: 'ElevateTheme';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    colorOnBackground: Attribute.String & Attribute.Required;
+    colorOnAccent: Attribute.String & Attribute.Required;
+    error: Attribute.String & Attribute.Required;
+    accent: Attribute.String & Attribute.Required;
+    background: Attribute.String & Attribute.Required;
+    alternativeBackground: Attribute.String & Attribute.Required;
+    overlay: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::elevate-theme.elevate-theme',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::elevate-theme.elevate-theme',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiRouteToPageMappingRouteToPageMapping
   extends Schema.CollectionType {
   collectionName: 'route_to_page_mappings';
@@ -2829,43 +2861,6 @@ export interface ApiRouteToPageMappingListRouteToPageMappingList
   };
 }
 
-export interface ApiVikimapThemeVikimapTheme extends Schema.CollectionType {
-  collectionName: 'vikimap_themes';
-  info: {
-    singularName: 'vikimap-theme';
-    pluralName: 'vikimap-themes';
-    displayName: 'VikimapTheme';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    colourOnBackground: Attribute.String & Attribute.Required;
-    colorOnAccent: Attribute.String & Attribute.Required;
-    error: Attribute.String & Attribute.Required;
-    accent: Attribute.String & Attribute.Required;
-    background: Attribute.String & Attribute.Required;
-    alternativeBackground: Attribute.String & Attribute.Required;
-    overlay: Attribute.String & Attribute.Required;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::vikimap-theme.vikimap-theme',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::vikimap-theme.vikimap-theme',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -2899,9 +2894,9 @@ declare module '@strapi/types' {
       'api::elevate-program.elevate-program': ApiElevateProgramElevateProgram;
       'api::elevate-season.elevate-season': ApiElevateSeasonElevateSeason;
       'api::elevate-show.elevate-show': ApiElevateShowElevateShow;
+      'api::elevate-theme.elevate-theme': ApiElevateThemeElevateTheme;
       'api::route-to-page-mapping.route-to-page-mapping': ApiRouteToPageMappingRouteToPageMapping;
       'api::route-to-page-mapping-list.route-to-page-mapping-list': ApiRouteToPageMappingListRouteToPageMappingList;
-      'api::vikimap-theme.vikimap-theme': ApiVikimapThemeVikimapTheme;
     }
   }
 }

@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "vikimap_themes",
+  "collectionName": "elevate_themes",
   "info": {
-    "singularName": "vikimap-theme",
-    "pluralName": "vikimap-themes",
-    "displayName": "VikimapTheme"
+    "singularName": "elevate-theme",
+    "pluralName": "elevate-themes",
+    "displayName": "ElevateTheme"
   },
   "options": {
     "draftAndPublish": true
@@ -15,7 +15,7 @@
       "type": "string",
       "required": true
     },
-    "colourOnBackground": {
+    "colorOnBackground": {
       "type": "string",
       "required": true
     },

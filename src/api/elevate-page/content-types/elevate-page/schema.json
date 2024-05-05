@@ -41,11 +41,6 @@
         "elevate-view-all",
         "elevate-collection"
       ]
-    },
-    "theme": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::vikimap-theme.vikimap-theme"
     }
   }
 }

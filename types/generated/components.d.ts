@@ -224,18 +224,7 @@ export interface ProvidersTheme extends Schema.Component {
     displayName: 'theme';
     description: '';
   };
-  attributes: {
-    default: Attribute.Relation<
-      'providers.theme',
-      'oneToOne',
-      'api::vikimap-theme.vikimap-theme'
-    >;
-    kids: Attribute.Relation<
-      'providers.theme',
-      'oneToOne',
-      'api::vikimap-theme.vikimap-theme'
-    >;
-  };
+  attributes: {};
 }
 
 export interface SharedMedia extends Schema.Component {
