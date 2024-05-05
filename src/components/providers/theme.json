@@ -6,15 +6,10 @@
   },
   "options": {},
   "attributes": {
-    "default": {
+    "elevate_theme": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::dictionary.dictionary"
-    },
-    "kids": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::dictionary.dictionary"
+      "target": "api::elevate-theme.elevate-theme"
     }
   }
 }
