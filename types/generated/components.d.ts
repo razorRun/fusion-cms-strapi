@@ -224,7 +224,18 @@ export interface ProvidersTheme extends Schema.Component {
     displayName: 'theme';
     description: '';
   };
-  attributes: {};
+  attributes: {
+    default: Attribute.Relation<
+      'providers.theme',
+      'oneToOne',
+      'api::dictionary.dictionary'
+    >;
+    kids: Attribute.Relation<
+      'providers.theme',
+      'oneToOne',
+      'api::dictionary.dictionary'
+    >;
+  };
 }
 
 export interface SharedMedia extends Schema.Component {

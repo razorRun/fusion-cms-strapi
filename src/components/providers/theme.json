@@ -5,5 +5,16 @@
     "description": ""
   },
   "options": {},
-  "attributes": {}
+  "attributes": {
+    "default": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::dictionary.dictionary"
+    },
+    "kids": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::dictionary.dictionary"
+    }
+  }
 }
