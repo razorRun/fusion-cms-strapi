@@ -4,7 +4,8 @@
   "info": {
     "singularName": "elevate-season",
     "pluralName": "elevate-seasons",
-    "displayName": "ElevateSeason"
+    "displayName": "ElevateSeason",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,6 +19,24 @@
     "seasonNumber": {
       "type": "integer",
       "required": true
+    },
+    "show": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::elevate-show.elevate-show",
+      "inversedBy": "seasons"
+    },
+    "episodes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::elevate-episode.elevate-episode",
+      "mappedBy": "season"
+    },
+    "availableDate": {
+      "type": "datetime"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

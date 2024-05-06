@@ -2218,6 +2218,15 @@ export interface ApiElevateEpisodeElevateEpisode extends Schema.CollectionType {
       'oneToOne',
       'api::elevate-show.elevate-show'
     >;
+    season: Attribute.Relation<
+      'api::elevate-episode.elevate-episode',
+      'manyToOne',
+      'api::elevate-season.elevate-season'
+    >;
+    availableDate: Attribute.DateTime;
+    contents: Attribute.Component<'elevate.elevate-content', true>;
+    credits: Attribute.Component<'elevate.elevate-credit', true>;
+    ratings: Attribute.Component<'elevate.elevate-rating', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2622,6 +2631,7 @@ export interface ApiElevateSeasonElevateSeason extends Schema.CollectionType {
     singularName: 'elevate-season';
     pluralName: 'elevate-seasons';
     displayName: 'ElevateSeason';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -2629,6 +2639,18 @@ export interface ApiElevateSeasonElevateSeason extends Schema.CollectionType {
   attributes: {
     title: Attribute.String & Attribute.Required;
     seasonNumber: Attribute.Integer & Attribute.Required;
+    show: Attribute.Relation<
+      'api::elevate-season.elevate-season',
+      'manyToOne',
+      'api::elevate-show.elevate-show'
+    >;
+    episodes: Attribute.Relation<
+      'api::elevate-season.elevate-season',
+      'oneToMany',
+      'api::elevate-episode.elevate-episode'
+    >;
+    availableDate: Attribute.DateTime;
+    description: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2708,6 +2730,17 @@ export interface ApiElevateShowElevateShow extends Schema.CollectionType {
       'oneToMany',
       'api::elevate-category.elevate-category'
     >;
+    seasons: Attribute.Relation<
+      'api::elevate-show.elevate-show',
+      'oneToMany',
+      'api::elevate-season.elevate-season'
+    >;
+    availableDate: Attribute.DateTime &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

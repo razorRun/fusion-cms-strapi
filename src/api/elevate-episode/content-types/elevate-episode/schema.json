@@ -34,6 +34,30 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::elevate-show.elevate-show"
+    },
+    "season": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::elevate-season.elevate-season",
+      "inversedBy": "episodes"
+    },
+    "availableDate": {
+      "type": "datetime"
+    },
+    "contents": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elevate.elevate-content"
+    },
+    "credits": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elevate.elevate-credit"
+    },
+    "ratings": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elevate.elevate-rating"
     }
   }
 }
