@@ -2651,6 +2651,7 @@ export interface ApiElevateSeasonElevateSeason extends Schema.CollectionType {
     >;
     availableDate: Attribute.DateTime;
     description: Attribute.Text;
+    displayText: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
