@@ -1,5 +1,124 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface ElevateDynamicContainers extends Schema.Component {
+  collectionName: 'components_elevate_dynamic_containers';
+  info: {
+    displayName: 'Dynamic Containers';
+    description: '';
+  };
+  attributes: {
+    ios: Attribute.Relation<
+      'elevate.dynamic-containers',
+      'oneToMany',
+      'api::elevate-container.elevate-container'
+    >;
+    android: Attribute.Relation<
+      'elevate.dynamic-containers',
+      'oneToMany',
+      'api::elevate-container.elevate-container'
+    >;
+    web: Attribute.Relation<
+      'elevate.dynamic-containers',
+      'oneToOne',
+      'api::elevate-container.elevate-container'
+    >;
+    tvos: Attribute.Relation<
+      'elevate.dynamic-containers',
+      'oneToMany',
+      'api::elevate-container.elevate-container'
+    >;
+    ctv: Attribute.Relation<
+      'elevate.dynamic-containers',
+      'oneToMany',
+      'api::elevate-container.elevate-container'
+    >;
+    overrideAll: Attribute.Relation<
+      'elevate.dynamic-containers',
+      'oneToMany',
+      'api::elevate-container.elevate-container'
+    >;
+  };
+}
+
+export interface ElevateDynamicMappings extends Schema.Component {
+  collectionName: 'components_elevate_dynamic_mappings';
+  info: {
+    displayName: 'Dynamic Mappings';
+    description: '';
+  };
+  attributes: {
+    ios: Attribute.Relation<
+      'elevate.dynamic-mappings',
+      'oneToMany',
+      'api::route-to-page-mapping.route-to-page-mapping'
+    >;
+    android: Attribute.Relation<
+      'elevate.dynamic-mappings',
+      'oneToMany',
+      'api::route-to-page-mapping.route-to-page-mapping'
+    >;
+    ctv: Attribute.Relation<
+      'elevate.dynamic-mappings',
+      'oneToMany',
+      'api::route-to-page-mapping.route-to-page-mapping'
+    >;
+    tvos: Attribute.Relation<
+      'elevate.dynamic-mappings',
+      'oneToMany',
+      'api::route-to-page-mapping.route-to-page-mapping'
+    >;
+    web: Attribute.Relation<
+      'elevate.dynamic-mappings',
+      'oneToMany',
+      'api::route-to-page-mapping.route-to-page-mapping'
+    >;
+    overrideAll: Attribute.Relation<
+      'elevate.dynamic-mappings',
+      'oneToMany',
+      'api::route-to-page-mapping.route-to-page-mapping'
+    >;
+  };
+}
+
+export interface ElevateDynamicMenuItems extends Schema.Component {
+  collectionName: 'components_elevate_dynamic_menu_items';
+  info: {
+    displayName: 'Dynamic Menu Items';
+  };
+  attributes: {
+    ios: Attribute.Relation<
+      'elevate.dynamic-menu-items',
+      'oneToMany',
+      'api::elevate-menu-item.elevate-menu-item'
+    >;
+    android: Attribute.Relation<
+      'elevate.dynamic-menu-items',
+      'oneToMany',
+      'api::elevate-menu-item.elevate-menu-item'
+    >;
+    web: Attribute.Relation<
+      'elevate.dynamic-menu-items',
+      'oneToMany',
+      'api::elevate-menu-item.elevate-menu-item'
+    >;
+    ctv: Attribute.Relation<
+      'elevate.dynamic-menu-items',
+      'oneToMany',
+      'api::elevate-menu-item.elevate-menu-item'
+    >;
+    tvos: Attribute.Relation<
+      'elevate.dynamic-menu-items',
+      'oneToMany',
+      'api::elevate-menu-item.elevate-menu-item'
+    >;
+    overrideAll: Attribute.Relation<
+      'elevate.dynamic-menu-items',
+      'oneToMany',
+      'api::elevate-menu-item.elevate-menu-item'
+    >;
+  };
+}
+
 export interface ElevateElevateContent extends Schema.Component {
   collectionName: 'components_elevate_elevate_contents';
   info: {
@@ -303,6 +422,9 @@ export interface SharedSlider extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'elevate.dynamic-containers': ElevateDynamicContainers;
+      'elevate.dynamic-mappings': ElevateDynamicMappings;
+      'elevate.dynamic-menu-items': ElevateDynamicMenuItems;
       'elevate.elevate-content': ElevateElevateContent;
       'elevate.elevate-credit': ElevateElevateCredit;
       'elevate.elevate-image': ElevateElevateImage;
