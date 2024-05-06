@@ -2575,6 +2575,11 @@ export interface ApiElevatePageElevatePage extends Schema.CollectionType {
       ]
     >;
     dynamicContainers: Attribute.Component<'elevate.dynamic-containers'>;
+    theme: Attribute.Relation<
+      'api::elevate-page.elevate-page',
+      'oneToOne',
+      'api::elevate-theme.elevate-theme'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

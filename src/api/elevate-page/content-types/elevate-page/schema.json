@@ -46,6 +46,11 @@
       "type": "component",
       "repeatable": false,
       "component": "elevate.dynamic-containers"
+    },
+    "theme": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::elevate-theme.elevate-theme"
     }
   }
 }
