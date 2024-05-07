@@ -10,11 +10,36 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+      "i18n": {
+          "localized": true
+      }
+  },
   "attributes": {
     "title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+          "i18n": {
+              "localized": true
+          }
+      }
+    },
+    "displayTitle": {
+        "type": "string",
+        "pluginOptions": {
+            "i18n": {
+                "localized": true
+            }
+        }
+    },
+    "description": {
+        "type": "text",
+        "pluginOptions": {
+            "i18n": {
+                "localized": true
+            }
+        }
     },
     "images": {
       "type": "component",
@@ -52,9 +77,6 @@
       "type": "component",
       "repeatable": true,
       "component": "elevate.elevate-rating"
-    },
-    "description": {
-      "type": "text"
     }
   }
 }

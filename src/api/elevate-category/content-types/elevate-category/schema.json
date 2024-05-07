@@ -10,16 +10,35 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+      "i18n": {
+          "localized": true
+      }
+  },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+          "i18n": {
+              "localized": true
+          }
+      }
     },
     "displayTitle": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+          "i18n": {
+              "localized": true
+          }
+      }
     },
     "description": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+          "i18n": {
+              "localized": true
+          }
+      }
     },
     "queryIdentifier": {
       "type": "string",

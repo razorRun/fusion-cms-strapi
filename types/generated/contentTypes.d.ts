@@ -2055,10 +2055,30 @@ export interface ApiElevateCategoryElevateCategory
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    title: Attribute.String;
-    displayTitle: Attribute.String;
-    description: Attribute.String;
+    title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    displayTitle: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     queryIdentifier: Attribute.String & Attribute.Unique;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -2075,6 +2095,12 @@ export interface ApiElevateCategoryElevateCategory
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::elevate-category.elevate-category',
+      'oneToMany',
+      'api::elevate-category.elevate-category'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -2089,9 +2115,26 @@ export interface ApiElevateChannelElevateChannel extends Schema.CollectionType {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    title: Attribute.String & Attribute.Required;
-    extendedDescription: Attribute.Text & Attribute.Required;
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    extendedDescription: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     images: Attribute.Component<'elevate.elevate-image', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -2108,6 +2151,12 @@ export interface ApiElevateChannelElevateChannel extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::elevate-channel.elevate-channel',
+      'oneToMany',
+      'api::elevate-channel.elevate-channel'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -2123,10 +2172,25 @@ export interface ApiElevateContainerElevateContainer
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    title: Attribute.String;
+    title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     query: Attribute.String;
-    displayText: Attribute.String;
+    displayText: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     template: Attribute.Enumeration<
       [
         'elevate-characters',
@@ -2162,6 +2226,12 @@ export interface ApiElevateContainerElevateContainer
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::elevate-container.elevate-container',
+      'oneToMany',
+      'api::elevate-container.elevate-container'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -2207,10 +2277,32 @@ export interface ApiElevateEpisodeElevateEpisode extends Schema.CollectionType {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    title: Attribute.String & Attribute.Required;
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    displayTitle: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     images: Attribute.Component<'elevate.elevate-image', true>;
-    seasonNumber: Attribute.Integer;
     episodeNumber: Attribute.Integer;
     show: Attribute.Relation<
       'api::elevate-episode.elevate-episode',
@@ -2226,7 +2318,6 @@ export interface ApiElevateEpisodeElevateEpisode extends Schema.CollectionType {
     contents: Attribute.Component<'elevate.elevate-content', true>;
     credits: Attribute.Component<'elevate.elevate-credit', true>;
     ratings: Attribute.Component<'elevate.elevate-rating', true>;
-    description: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2242,6 +2333,12 @@ export interface ApiElevateEpisodeElevateEpisode extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::elevate-episode.elevate-episode',
+      'oneToMany',
+      'api::elevate-episode.elevate-episode'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -2330,9 +2427,25 @@ export interface ApiElevateMenuItemElevateMenuItem
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    title: Attribute.String & Attribute.Required;
-    displayText: Attribute.String;
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    displayText: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     hiddenWhenAuth: Attribute.Boolean;
     requireAuth: Attribute.Boolean;
     page: Attribute.Relation<
@@ -2405,6 +2518,12 @@ export interface ApiElevateMenuItemElevateMenuItem
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::elevate-menu-item.elevate-menu-item',
+      'oneToMany',
+      'api::elevate-menu-item.elevate-menu-item'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -2462,6 +2581,12 @@ export interface ApiElevateMovieElevateMovie extends Schema.CollectionType {
   attributes: {
     title: Attribute.String &
       Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    displayTitle: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -2602,17 +2727,35 @@ export interface ApiElevateProgramElevateProgram extends Schema.CollectionType {
     singularName: 'elevate-program';
     pluralName: 'elevate-programs';
     displayName: 'ElevateProgram';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    displayTitle: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     startTime: Attribute.DateTime & Attribute.Required;
     endTime: Attribute.DateTime & Attribute.Required;
     mediaId: Attribute.String;
     type: Attribute.String & Attribute.Required;
     channelId: Attribute.String & Attribute.Required;
-    title: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2628,6 +2771,12 @@ export interface ApiElevateProgramElevateProgram extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::elevate-program.elevate-program',
+      'oneToMany',
+      'api::elevate-program.elevate-program'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -2642,8 +2791,31 @@ export interface ApiElevateSeasonElevateSeason extends Schema.CollectionType {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    title: Attribute.String & Attribute.Required;
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    displayText: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     seasonNumber: Attribute.Integer & Attribute.Required;
     show: Attribute.Relation<
       'api::elevate-season.elevate-season',
@@ -2656,8 +2828,6 @@ export interface ApiElevateSeasonElevateSeason extends Schema.CollectionType {
       'api::elevate-episode.elevate-episode'
     >;
     availableDate: Attribute.DateTime;
-    description: Attribute.Text;
-    displayText: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2673,6 +2843,12 @@ export interface ApiElevateSeasonElevateSeason extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::elevate-season.elevate-season',
+      'oneToMany',
+      'api::elevate-season.elevate-season'
+    >;
+    locale: Attribute.String;
   };
 }
 

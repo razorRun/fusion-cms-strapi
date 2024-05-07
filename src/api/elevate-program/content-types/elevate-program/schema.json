@@ -4,13 +4,35 @@
   "info": {
     "singularName": "elevate-program",
     "pluralName": "elevate-programs",
-    "displayName": "ElevateProgram"
+    "displayName": "ElevateProgram",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+      "i18n": {
+          "localized": true
+      }
+  },
   "attributes": {
+    "title": {
+        "type": "string",
+        "required": true,
+        "pluginOptions": {
+            "i18n": {
+                "localized": true
+            }
+        }
+    },
+    "displayTitle": {
+        "type": "string",
+        "pluginOptions": {
+            "i18n": {
+                "localized": true
+            }
+        }
+    },
     "startTime": {
       "type": "datetime",
       "required": true
@@ -27,10 +49,6 @@
       "required": true
     },
     "channelId": {
-      "type": "string",
-      "required": true
-    },
-    "title": {
       "type": "string",
       "required": true
     }
