@@ -19,11 +19,6 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::elevate-menu-item.elevate-menu-item"
-    },
-    "dynamicItems": {
-      "type": "component",
-      "repeatable": false,
-      "component": "elevate.dynamic-menu-items"
     }
   }
 }

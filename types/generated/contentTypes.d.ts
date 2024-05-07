@@ -2300,7 +2300,6 @@ export interface ApiElevateMenuElevateMenu extends Schema.CollectionType {
       'oneToMany',
       'api::elevate-menu-item.elevate-menu-item'
     >;
-    dynamicItems: Attribute.Component<'elevate.dynamic-menu-items'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2574,7 +2573,6 @@ export interface ApiElevatePageElevatePage extends Schema.CollectionType {
         'elevate-collection'
       ]
     >;
-    dynamicContainers: Attribute.Component<'elevate.dynamic-containers'>;
     theme: Attribute.Relation<
       'api::elevate-page.elevate-page',
       'oneToOne',
@@ -2885,7 +2883,6 @@ export interface ApiRouteToPageMappingListRouteToPageMappingList
       'oneToMany',
       'api::route-to-page-mapping.route-to-page-mapping'
     >;
-    dynamicMappings: Attribute.Component<'elevate.dynamic-mappings'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

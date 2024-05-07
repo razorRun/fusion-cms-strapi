@@ -42,11 +42,6 @@
         "elevate-collection"
       ]
     },
-    "dynamicContainers": {
-      "type": "component",
-      "repeatable": false,
-      "component": "elevate.dynamic-containers"
-    },
     "theme": {
       "type": "relation",
       "relation": "oneToOne",

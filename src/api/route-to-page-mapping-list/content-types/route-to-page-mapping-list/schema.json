@@ -19,11 +19,6 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::route-to-page-mapping.route-to-page-mapping"
-    },
-    "dynamicMappings": {
-      "type": "component",
-      "repeatable": false,
-      "component": "elevate.dynamic-mappings"
     }
   }
 }
