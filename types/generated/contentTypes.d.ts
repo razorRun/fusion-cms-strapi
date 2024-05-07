@@ -2227,6 +2227,7 @@ export interface ApiElevateEpisodeElevateEpisode extends Schema.CollectionType {
     contents: Attribute.Component<'elevate.elevate-content', true>;
     credits: Attribute.Component<'elevate.elevate-credit', true>;
     ratings: Attribute.Component<'elevate.elevate-rating', true>;
+    description: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
