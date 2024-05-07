@@ -16,9 +16,6 @@
       "type": "string",
       "required": true
     },
-    "duration": {
-      "type": "float"
-    },
     "images": {
       "type": "component",
       "repeatable": true,

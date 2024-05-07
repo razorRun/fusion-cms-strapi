@@ -2209,7 +2209,6 @@ export interface ApiElevateEpisodeElevateEpisode extends Schema.CollectionType {
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
-    duration: Attribute.Float;
     images: Attribute.Component<'elevate.elevate-image', true>;
     seasonNumber: Attribute.Integer;
     episodeNumber: Attribute.Integer;
