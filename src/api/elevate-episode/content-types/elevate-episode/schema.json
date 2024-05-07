@@ -21,9 +21,6 @@
       "repeatable": true,
       "component": "elevate.elevate-image"
     },
-    "seasonNumber": {
-      "type": "integer"
-    },
     "episodeNumber": {
       "type": "integer"
     },
