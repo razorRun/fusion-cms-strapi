@@ -2199,7 +2199,6 @@ export interface ApiElevateContainerElevateContainer
         'elevate-grid-horizontal-wide'
       ]
     >;
-    items: Attribute.String;
     content: Attribute.DynamicZone<
       ['elevate.content-show', 'elevate.content-movie', 'elevate.programs']
     > &

@@ -55,9 +55,6 @@
         "elevate-grid-horizontal-wide"
       ]
     },
-    "items": {
-      "type": "string"
-    },
     "content": {
       "pluginOptions": {
         "i18n": {
