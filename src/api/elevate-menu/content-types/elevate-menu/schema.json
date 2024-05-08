@@ -27,7 +27,12 @@
     "items": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::elevate-menu-item.elevate-menu-item"
+      "target": "api::elevate-menu-item.elevate-menu-item",
+      "pluginOptions": {
+          "i18n": {
+              "localized": false
+          }
+      }
     }
   }
 }

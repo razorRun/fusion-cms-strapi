@@ -46,19 +46,34 @@
       "required": true
     },
     "show": {
+      "pluginOptions": {
+          "i18n": {
+              "localized": false
+          }
+      },
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::elevate-show.elevate-show",
       "inversedBy": "seasons"
     },
     "episodes": {
+      "pluginOptions": {
+          "i18n": {
+              "localized": false
+          }
+      },
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::elevate-episode.elevate-episode",
       "mappedBy": "season"
     },
     "availableDate": {
-      "type": "datetime"
+      "type": "datetime",
+      "pluginOptions": {
+          "i18n": {
+              "localized": false
+          }
+      }
     }
   }
 }

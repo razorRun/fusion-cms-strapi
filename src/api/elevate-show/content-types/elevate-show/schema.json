@@ -48,7 +48,7 @@
     "publishedDate": {
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "type": "datetime"
@@ -58,7 +58,7 @@
       "repeatable": true,
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "component": "elevate.elevate-rating"
@@ -68,17 +68,27 @@
       "repeatable": true,
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "component": "elevate.elevate-credit"
     },
     "categories": {
+      "pluginOptions": {
+          "i18n": {
+              "localized": false
+          }
+      },
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::elevate-category.elevate-category"
     },
     "seasons": {
+      "pluginOptions": {
+          "i18n": {
+              "localized": false
+          }
+      },
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::elevate-season.elevate-season",
@@ -87,7 +97,7 @@
     "availableDate": {
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "type": "datetime"

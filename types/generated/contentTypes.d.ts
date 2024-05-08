@@ -2308,12 +2308,22 @@ export interface ApiElevateEpisodeElevateEpisode extends Schema.CollectionType {
       'api::elevate-episode.elevate-episode',
       'oneToOne',
       'api::elevate-show.elevate-show'
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     season: Attribute.Relation<
       'api::elevate-episode.elevate-episode',
       'manyToOne',
       'api::elevate-season.elevate-season'
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     availableDate: Attribute.DateTime;
     contents: Attribute.Component<'elevate.elevate-content', true>;
     credits: Attribute.Component<'elevate.elevate-credit', true>;
@@ -2406,7 +2416,12 @@ export interface ApiElevateMenuElevateMenu extends Schema.CollectionType {
       'api::elevate-menu.elevate-menu',
       'oneToMany',
       'api::elevate-menu-item.elevate-menu-item'
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2618,40 +2633,45 @@ export interface ApiElevateMovieElevateMovie extends Schema.CollectionType {
     publishedDate: Attribute.DateTime &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     contents: Attribute.Component<'elevate.elevate-content', true> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     images: Attribute.Component<'elevate.elevate-image', true> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     rating: Attribute.Component<'elevate.elevate-rating', true> &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     credits: Attribute.Component<'elevate.elevate-credit', true> &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     categories: Attribute.Relation<
       'api::elevate-movie.elevate-movie',
       'oneToMany',
       'api::elevate-category.elevate-category'
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2837,13 +2857,28 @@ export interface ApiElevateSeasonElevateSeason extends Schema.CollectionType {
       'api::elevate-season.elevate-season',
       'manyToOne',
       'api::elevate-show.elevate-show'
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     episodes: Attribute.Relation<
       'api::elevate-season.elevate-season',
       'oneToMany',
       'api::elevate-episode.elevate-episode'
-    >;
-    availableDate: Attribute.DateTime;
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    availableDate: Attribute.DateTime &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2909,35 +2944,45 @@ export interface ApiElevateShowElevateShow extends Schema.CollectionType {
     publishedDate: Attribute.DateTime &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     rating: Attribute.Component<'elevate.elevate-rating', true> &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     credits: Attribute.Component<'elevate.elevate-credit', true> &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     categories: Attribute.Relation<
       'api::elevate-show.elevate-show',
       'oneToMany',
       'api::elevate-category.elevate-category'
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     seasons: Attribute.Relation<
       'api::elevate-show.elevate-show',
       'oneToMany',
       'api::elevate-season.elevate-season'
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     availableDate: Attribute.DateTime &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     createdAt: Attribute.DateTime;

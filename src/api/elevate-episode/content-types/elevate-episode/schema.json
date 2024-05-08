@@ -52,13 +52,23 @@
     "show": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::elevate-show.elevate-show"
+      "target": "api::elevate-show.elevate-show",
+      "pluginOptions": {
+          "i18n": {
+              "localized": true
+          }
+      }
     },
     "season": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::elevate-season.elevate-season",
-      "inversedBy": "episodes"
+      "inversedBy": "episodes",
+      "pluginOptions": {
+          "i18n": {
+              "localized": true
+          }
+      }
     },
     "availableDate": {
       "type": "datetime"
