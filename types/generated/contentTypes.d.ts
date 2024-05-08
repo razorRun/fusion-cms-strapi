@@ -2390,8 +2390,18 @@ export interface ApiElevateMenuElevateMenu extends Schema.CollectionType {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    title: Attribute.String;
+    title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     items: Attribute.Relation<
       'api::elevate-menu.elevate-menu',
       'oneToMany',
@@ -2412,6 +2422,12 @@ export interface ApiElevateMenuElevateMenu extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::elevate-menu.elevate-menu',
+      'oneToMany',
+      'api::elevate-menu.elevate-menu'
+    >;
+    locale: Attribute.String;
   };
 }
 
