@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_elevate_programs",
+  "info": {
+    "displayName": "ContainerPrograms",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "programs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::elevate-program.elevate-program"
+    }
+  }
+}

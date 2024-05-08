@@ -11,18 +11,18 @@
     "draftAndPublish": true
   },
   "pluginOptions": {
-      "i18n": {
-          "localized": true
-      }
+    "i18n": {
+      "localized": true
+    }
   },
   "attributes": {
     "title": {
-        "type": "string",
-        "pluginOptions": {
-            "i18n": {
-                "localized": true
-            }
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
         }
+      }
     },
     "query": {
       "type": "string"
@@ -30,9 +30,9 @@
     "displayText": {
       "type": "string",
       "pluginOptions": {
-          "i18n": {
-              "localized": true
-          }
+        "i18n": {
+          "localized": true
+        }
       }
     },
     "template": {
@@ -57,6 +57,19 @@
     },
     "items": {
       "type": "string"
+    },
+    "content": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "dynamiczone",
+      "components": [
+        "elevate.content-show",
+        "elevate.content-movie",
+        "elevate.programs"
+      ]
     }
   }
 }

@@ -10,18 +10,32 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+      "i18n": {
+          "localized": true
+      }
+  },
   "attributes": {
     "title": {
       "type": "string",
       "required": true
     },
     "containers": {
+      "pluginOptions": {
+          "i18n": {
+              "localized": false
+          }
+      },
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::elevate-container.elevate-container"
     },
     "template": {
+      "pluginOptions": {
+          "i18n": {
+              "localized": false
+          }
+      },
       "type": "enumeration",
       "enum": [
         "elevate-modular-ui",
@@ -45,7 +59,12 @@
     "theme": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::elevate-theme.elevate-theme"
+      "target": "api::elevate-theme.elevate-theme",
+      "pluginOptions": {
+          "i18n": {
+              "localized": false
+          }
+      }
     }
   }
 }

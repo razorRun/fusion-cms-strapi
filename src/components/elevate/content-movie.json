@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_elevate_content_movies",
+  "info": {
+    "displayName": "ContainerMovies",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "movies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::elevate-movie.elevate-movie"
+    }
+  }
+}

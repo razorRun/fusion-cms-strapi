@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_elevate_content_shows",
+  "info": {
+    "displayName": "ContainerShows",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "shows": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::elevate-show.elevate-show"
+    }
+  }
+}

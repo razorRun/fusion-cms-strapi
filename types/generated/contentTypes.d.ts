@@ -799,11 +799,6 @@ export interface ApiDictionaryDictionary extends Schema.CollectionType {
   options: {
     draftAndPublish: true;
   };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
   attributes: {
     title: Attribute.String &
       Attribute.Required &
@@ -2034,12 +2029,6 @@ export interface ApiDictionaryDictionary extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    localizations: Attribute.Relation<
-      'api::dictionary.dictionary',
-      'oneToMany',
-      'api::dictionary.dictionary'
-    >;
-    locale: Attribute.String;
   };
 }
 
@@ -2211,6 +2200,14 @@ export interface ApiElevateContainerElevateContainer
       ]
     >;
     items: Attribute.String;
+    content: Attribute.DynamicZone<
+      ['elevate.content-show', 'elevate.content-movie', 'elevate.programs']
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2707,13 +2704,23 @@ export interface ApiElevatePageElevatePage extends Schema.CollectionType {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
     title: Attribute.String & Attribute.Required;
     containers: Attribute.Relation<
       'api::elevate-page.elevate-page',
       'oneToMany',
       'api::elevate-container.elevate-container'
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     template: Attribute.Enumeration<
       [
         'elevate-modular-ui',
@@ -2733,12 +2740,22 @@ export interface ApiElevatePageElevatePage extends Schema.CollectionType {
         'elevate-view-all',
         'elevate-collection'
       ]
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     theme: Attribute.Relation<
       'api::elevate-page.elevate-page',
       'oneToOne',
       'api::elevate-theme.elevate-theme'
-    >;
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2754,6 +2771,12 @@ export interface ApiElevatePageElevatePage extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::elevate-page.elevate-page',
+      'oneToMany',
+      'api::elevate-page.elevate-page'
+    >;
+    locale: Attribute.String;
   };
 }
 
