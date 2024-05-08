@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_elevate_content_movies",
+  "collectionName": "components_elevate_container_movies",
   "info": {
-    "displayName": "ContainerMovies",
-    "description": ""
+    "displayName": "ContainerMovies"
   },
   "options": {},
   "attributes": {

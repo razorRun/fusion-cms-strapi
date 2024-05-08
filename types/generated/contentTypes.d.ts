@@ -2200,7 +2200,11 @@ export interface ApiElevateContainerElevateContainer
       ]
     >;
     content: Attribute.DynamicZone<
-      ['elevate.content-show', 'elevate.content-movie', 'elevate.programs']
+      [
+        'elevate.container-movies',
+        'elevate.container-shows',
+        'elevate.container-programs'
+      ]
     > &
       Attribute.SetPluginOptions<{
         i18n: {

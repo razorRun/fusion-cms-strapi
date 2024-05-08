@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_elevate_programs",
+  "collectionName": "components_elevate_container_programs",
   "info": {
-    "displayName": "ContainerPrograms",
-    "description": ""
+    "displayName": "ContainerPrograms"
   },
   "options": {},
   "attributes": {

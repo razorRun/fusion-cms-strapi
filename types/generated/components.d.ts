@@ -1,29 +1,41 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
-export interface ElevateContentMovie extends Schema.Component {
-  collectionName: 'components_elevate_content_movies';
+export interface ElevateContainerMovies extends Schema.Component {
+  collectionName: 'components_elevate_container_movies';
   info: {
     displayName: 'ContainerMovies';
-    description: '';
   };
   attributes: {
     movies: Attribute.Relation<
-      'elevate.content-movie',
+      'elevate.container-movies',
       'oneToMany',
       'api::elevate-movie.elevate-movie'
     >;
   };
 }
 
-export interface ElevateContentShow extends Schema.Component {
-  collectionName: 'components_elevate_content_shows';
+export interface ElevateContainerPrograms extends Schema.Component {
+  collectionName: 'components_elevate_container_programs';
+  info: {
+    displayName: 'ContainerPrograms';
+  };
+  attributes: {
+    programs: Attribute.Relation<
+      'elevate.container-programs',
+      'oneToMany',
+      'api::elevate-program.elevate-program'
+    >;
+  };
+}
+
+export interface ElevateContainerShows extends Schema.Component {
+  collectionName: 'components_elevate_container_shows';
   info: {
     displayName: 'ContainerShows';
-    description: '';
   };
   attributes: {
     shows: Attribute.Relation<
-      'elevate.content-show',
+      'elevate.container-shows',
       'oneToMany',
       'api::elevate-show.elevate-show'
     >;
@@ -87,21 +99,6 @@ export interface ElevateElevateRating extends Schema.Component {
   attributes: {
     scheme: Attribute.String & Attribute.Required;
     rating: Attribute.String & Attribute.Required;
-  };
-}
-
-export interface ElevatePrograms extends Schema.Component {
-  collectionName: 'components_elevate_programs';
-  info: {
-    displayName: 'ContainerPrograms';
-    description: '';
-  };
-  attributes: {
-    programs: Attribute.Relation<
-      'elevate.programs',
-      'oneToMany',
-      'api::elevate-program.elevate-program'
-    >;
   };
 }
 
@@ -348,13 +345,13 @@ export interface SharedSlider extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'elevate.content-movie': ElevateContentMovie;
-      'elevate.content-show': ElevateContentShow;
+      'elevate.container-movies': ElevateContainerMovies;
+      'elevate.container-programs': ElevateContainerPrograms;
+      'elevate.container-shows': ElevateContainerShows;
       'elevate.elevate-content': ElevateElevateContent;
       'elevate.elevate-credit': ElevateElevateCredit;
       'elevate.elevate-image': ElevateElevateImage;
       'elevate.elevate-rating': ElevateElevateRating;
-      'elevate.programs': ElevatePrograms;
       'metadata.application': MetadataApplication;
       'metadata.feature-flags': MetadataFeatureFlags;
       'metadata.i18n': MetadataI18N;

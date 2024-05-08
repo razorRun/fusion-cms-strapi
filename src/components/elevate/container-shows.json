@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_elevate_content_shows",
+  "collectionName": "components_elevate_container_shows",
   "info": {
-    "displayName": "ContainerShows",
-    "description": ""
+    "displayName": "ContainerShows"
   },
   "options": {},
   "attributes": {
